@@ -45,7 +45,7 @@ export function Profile() {
                 <Typography noWrap={true}>Állampolgárság: magyar</Typography>
                 <Typography noWrap={true}>
                     Tartózkodási hely:
-                    <Link href='https://www.google.com/maps/place/Budapest,+XVI.+ker%C3%BClet/@47.5191306,19.1690793,13z/data=!3m1!4b1!4m5!3m4!1s0x4741c4f1799506fb:0x500c4290c1ed630!8m2!3d47.5183029!4d19.191941'>
+                    <Link href='https://www.google.com/maps/place/Budapest,+XVI.+ker%C3%BClet/@47.5191306,19.1690793,13z/'>
                         Budapest, XVI. kerület
                     </Link>
                 </Typography>
