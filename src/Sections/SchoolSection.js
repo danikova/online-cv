@@ -112,6 +112,7 @@ export function SchoolSection() {
                                 <StaticRecursiveTreeView data={item.data} />
                             </Box>
                         }
+                        last={sumScoolData.length - 1 === i}
                     />
                 ))}
             </Timeline>
