@@ -11,7 +11,7 @@ import TimelineDot from '@material-ui/lab/TimelineDot';
 import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
 
 import { Box, createStyles, makeStyles, Typography } from '@material-ui/core';
-import { StaticRecursiveTreeView } from '../RecursiveTreeView';
+import { StaticRecursiveTreeView } from '../StaticRecursiveTreeView';
 
 export const useStyles = makeStyles((theme) =>
     createStyles({
