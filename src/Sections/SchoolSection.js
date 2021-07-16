@@ -2,9 +2,20 @@ import React from 'react';
 import Section from './Section';
 import SchoolIcon from '@material-ui/icons/School';
 
-import { Box, Typography } from '@material-ui/core';
+import { Box, createStyles, makeStyles, Typography } from '@material-ui/core';
 import { StaticRecursiveTreeView } from '../StaticRecursiveTreeView';
 import { Timeline, TimelineItem } from '../Timeline';
+
+export const useStyles = makeStyles((theme) =>
+    createStyles({
+        schoolSectionRoot: {
+            '& .MuiTimelineOppositeContent-root': {
+                maxWidth: '100px',
+                paddingLeft: 0,
+            },
+        },
+    }),
+);
 
 const gdfSchoolData = [
     {
@@ -95,8 +106,13 @@ const sumScoolData = [
 ];
 
 export function SchoolSection() {
+    const classes = useStyles();
     return (
-        <Section icon={SchoolIcon} title='Tanulmányok'>
+        <Section
+            icon={SchoolIcon}
+            title='Tanulmányok'
+            className={classes.schoolSectionRoot}
+        >
             <Timeline>
                 {sumScoolData.map((item, i) => (
                     <TimelineItem
