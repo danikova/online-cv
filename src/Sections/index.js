@@ -23,8 +23,8 @@ export function Sections() {
     return (
         <Box className={classes.sectionsRoot}>
             <Box className={classes.sectionsWrapper}>
-                <SchoolSection />
                 <WorkSection />
+                <SchoolSection />
                 <LanguagesSection />
                 <HobbySection />
             </Box>
