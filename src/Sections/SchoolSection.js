@@ -13,7 +13,7 @@ const gdfSchoolData = [
             { name: 'SQL adatbázisok' },
             { name: '.NET keretrendszer' },
             { name: 'Windows / Linux szerverek üzemeltetése' },
-            { name: 'Mesterseges inteligenciai fogalmak' },
+            { name: 'mesterseges inteligenciai fogalmak' },
         ],
     },
     {
@@ -55,10 +55,10 @@ const pazmanySchoolData = [
 
 const wattaySchoolData = [
     {
-        name: 'Informatikus szak',
+        name: 'informatikus szak',
         children: [
             {
-                name: 'Szakmai tárgyak',
+                name: 'szakmai tárgyak',
                 children: [{ name: 'matematika' }, { name: 'informatika' }],
             },
         ],
