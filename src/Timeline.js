@@ -15,36 +15,20 @@ export const useStyles = makeStyles((theme) =>
             margin: 0,
             padding: 0,
         },
-        topc: {
-            maxWidth: '100px',
-            paddingLeft: 0,
-        },
     }),
 );
 
-export function TimelineItem({
-    oppContent,
-    content,
-    last = false,
-    oppContentClass = null,
-    contentClass = null,
-}) {
-    const classes = useStyles();
-
+export function TimelineItem({ oppContent, content, last = false }) {
     return (
         <TimelineItemOriginal>
-            <TimelineOppositeContent
-                className={oppContentClass || classes.topc}
-            >
+            <TimelineOppositeContent>
                 {oppContent}
             </TimelineOppositeContent>
             <TimelineSeparator>
                 <TimelineDot />
                 {!last && <TimelineConnector />}
             </TimelineSeparator>
-            <TimelineContent className={contentClass}>
-                {content}
-            </TimelineContent>
+            <TimelineContent>{content}</TimelineContent>
         </TimelineItemOriginal>
     );
 }
