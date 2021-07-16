@@ -22,19 +22,29 @@ export const useStyles = makeStyles((theme) =>
     }),
 );
 
-export function TimelineItem({ oppContent, content, last = false }) {
+export function TimelineItem({
+    oppContent,
+    content,
+    last = false,
+    oppContentClass = null,
+    contentClass = null,
+}) {
     const classes = useStyles();
 
     return (
         <TimelineItemOriginal>
-            <TimelineOppositeContent className={classes.topc}>
+            <TimelineOppositeContent
+                className={oppContentClass || classes.topc}
+            >
                 {oppContent}
             </TimelineOppositeContent>
             <TimelineSeparator>
                 <TimelineDot />
                 {!last && <TimelineConnector />}
             </TimelineSeparator>
-            <TimelineContent>{content}</TimelineContent>
+            <TimelineContent className={contentClass}>
+                {content}
+            </TimelineContent>
         </TimelineItemOriginal>
     );
 }
