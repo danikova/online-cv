@@ -5,8 +5,6 @@ import { Timeline, TimelineItem } from '../Timeline';
 import {
     Box,
     createStyles,
-    Divider,
-    LinearProgress,
     makeStyles,
     Typography,
 } from '@material-ui/core';
@@ -79,7 +77,6 @@ export function WorkSection() {
             title='Szakmai tapasztalatok'
             className={classes.workSectionRoot}
         >
-            <Typography variant={'h5'}>Munkahelyeim:</Typography>
             <Typography variant={'h6'}>
                 Nokia Solutions and Networks Kft.
             </Typography>
@@ -163,14 +160,6 @@ export function WorkSection() {
                     last
                 />
             </Timeline>
-            <Divider style={{ margin: '25px 0' }} />
-            <Typography variant={'h5'}>Képességeim:</Typography>
-            <Typography>Python</Typography>
-            <LinearProgress variant='determinate' value={80} />
-            <Typography>Js</Typography>
-            <LinearProgress variant='determinate' value={70} />
-            <Typography>Linux</Typography>
-            <LinearProgress variant='determinate' value={65} />
         </Section>
     );
 }
