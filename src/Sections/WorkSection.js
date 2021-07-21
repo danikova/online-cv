@@ -2,12 +2,7 @@ import React from 'react';
 import Section from './Section';
 import WorkIcon from '@material-ui/icons/Work';
 import { Timeline, TimelineItem } from '../Timeline';
-import {
-    Box,
-    createStyles,
-    makeStyles,
-    Typography,
-} from '@material-ui/core';
+import { Box, createStyles, makeStyles, Typography } from '@material-ui/core';
 import Moment from 'react-moment';
 import moment from 'moment';
 
@@ -34,6 +29,55 @@ export const useStyles = makeStyles((theme) =>
         dividerMargin: { margin: '30px' },
     }),
 );
+
+const sumWorkData = [
+    {
+        company: 'Nokia Solutions and Networks Kft.',
+        timeline: [
+            {
+                from: '2020.01.01',
+                to: Date(),
+                present: true,
+                title: 'Software Specialist',
+                caption:
+                    'Python Django alapú webes alkalmazás fejlesztése, React klienssel ami YANG alapú adatszerkezeteket kezel és validál. Több konténeres struktúrával, amit eleinte Docker Compose-al OpenStack-be, majd Kubernetes-el saját Cloudok-ba szállítottunk a vevőkhöz.',
+            },
+            {
+                from: '2019.07.01',
+                to: '2020.01.01',
+                title: 'Verification Specialist',
+                caption:
+                    'Python webes alkalmazások fejleztését, karbantartását végeztem a System Verification csapat számára, a fő cél az automatizálás volt.',
+            },
+            {
+                from: '2018.04.01',
+                to: '2019.07.01',
+                title: 'DevOps Engineer',
+                caption:
+                    'Egy flexibilis monitorozó rendszert fejlesztettem bele a termékünkben, ami képes volt baremetal és hálózati statisztikák gyűjtésére, ezen felül több biztonsági fejlesztésen dolgoztam.',
+            },
+            {
+                from: '2017.04.01',
+                to: '2018.04.01',
+                title: 'Software Developer Intern',
+                caption:
+                    'Egy webes, YANG-on alapuló konfiguráció tool-on dolgoztam.',
+            },
+        ],
+    },
+    {
+        company: 'Cadline Kft.',
+        timeline: [
+            {
+                from: '2016.06.01',
+                to: '2016.08.01',
+                title: 'Software Developer Intern',
+                caption:
+                    'Résztvettem az Archline.XP belsőépítészeti szoftver fejleszésén, egy falburkoló algoritmuson dolgoztam ami képes véletlen méretű négyszögekkel lefedni egyz adott területet.',
+            },
+        ],
+    },
+];
 
 function WorkYears({ from, to, present = false }) {
     from = new Date(from);
@@ -77,89 +121,36 @@ export function WorkSection() {
             title='Szakmai tapasztalatok'
             className={classes.workSectionRoot}
         >
-            <Typography variant={'h6'}>
-                Nokia Solutions and Networks Kft.
-            </Typography>
-            <Timeline>
-                <TimelineItem
-                    oppContent={
-                        <WorkYears from='2020.01.01' to={Date()} present />
-                    }
-                    content={
-                        <Box>
-                            <Typography>Software Specialist</Typography>
-                            <Typography variant={'caption'}>
-                                Python Django alapú webes alkalmazás
-                                fejlesztése, React klienssel ami YANG alapú
-                                adatszerkezeteket kezel és validál. Több
-                                konténeres struktúrával, amit eleinte Docker
-                                Compose-al OpenStack-be, majd Kubernetes-el
-                                saját Cloudok-ba szállítottunk a vevőkhöz.
-                            </Typography>
-                        </Box>
-                    }
-                />
-                <TimelineItem
-                    oppContent={<WorkYears from='2019.07.01' to='2020.01.01' />}
-                    content={
-                        <Box>
-                            <Typography>Verification Specialist</Typography>
-                            <Typography variant={'caption'}>
-                                Python webes alkalmazások fejleztését,
-                                karbantartását végeztem a System Verification
-                                csapat számára, a fő cél az automatizálás volt.
-                            </Typography>
-                        </Box>
-                    }
-                />
-                <TimelineItem
-                    oppContent={<WorkYears from='2018.04.01' to='2019.07.01' />}
-                    content={
-                        <Box>
-                            <Typography>DevOps Engineer</Typography>
-                            <Typography variant={'caption'}>
-                                Egy flexibilis monitorozó rendszert
-                                fejlesztettem bele a termékünkben, ami képes
-                                volt baremetal és hálózati statisztikák
-                                gyűjtésére, ezen felül több biztonsági
-                                fejlesztésen dolgoztam.
-                            </Typography>
-                        </Box>
-                    }
-                />
-                <TimelineItem
-                    oppContent={<WorkYears from='2017.04.01' to='2018.04.01' />}
-                    content={
-                        <Box>
-                            <Typography>Software Developer Intern</Typography>
-                            <Typography variant={'caption'}>
-                                Egy webes, YANG-on alapuló konfiguráció tool-on
-                                dolgoztam.
-                            </Typography>
-                        </Box>
-                    }
-                    last
-                />
-            </Timeline>
-
-            <Typography variant={'h6'}>Cadline Kft.</Typography>
-            <Timeline>
-                <TimelineItem
-                    oppContent={<WorkYears from='2016.06.01' to='2016.08.01' />}
-                    content={
-                        <Box>
-                            <Typography>Software Developer Intern</Typography>
-                            <Typography variant={'caption'}>
-                                Résztvettem az Archline.XP belsőépítészeti
-                                szoftver fejleszésén, egy falburkoló
-                                algoritmuson dolgoztam ami képes véletlen méretű
-                                négyszögekkel lefedni egyz adott területet.
-                            </Typography>
-                        </Box>
-                    }
-                    last
-                />
-            </Timeline>
+            {sumWorkData.map((item, i) => (
+                <Box key={`company-list-${i}`}>
+                    <Typography variant={'h6'}>{item.company}</Typography>
+                    <Timeline>
+                        {item.timeline.map((timelineData, j) => (
+                            <TimelineItem
+                                key={`timeline-item-${j}`}
+                                oppContent={
+                                    <WorkYears
+                                        from={timelineData.from}
+                                        to={timelineData.to}
+                                        present={timelineData.present}
+                                    />
+                                }
+                                last={item.timeline.length - 1 === j}
+                                content={
+                                    <Box>
+                                        <Typography>
+                                            {timelineData.title}
+                                        </Typography>
+                                        <Typography variant={'caption'}>
+                                            {timelineData.caption}
+                                        </Typography>
+                                    </Box>
+                                }
+                            />
+                        ))}
+                    </Timeline>
+                </Box>
+            ))}
         </Section>
     );
 }
