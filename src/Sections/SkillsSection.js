@@ -158,6 +158,7 @@ export function SkillsSection() {
                                 let chipProps = {
                                     label: chipName,
                                     variant: 'outlined',
+                                    size: 'small',
                                     key: `skill-item-${j}`,
                                 };
                                 if (item.urlTemplate)
@@ -165,7 +166,7 @@ export function SkillsSection() {
                                         ...chipProps,
                                         component: 'a',
                                         href: item.urlTemplate(chipName),
-                                        clickable: 'true',
+                                        clickable: true,
                                     };
                                 return <Chip {...chipProps} />;
                             })}
