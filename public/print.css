@@ -1,0 +1,56 @@
+#root,
+html,
+body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+
+    color: black !important;
+}
+
+@page {
+    size: A4;
+    margin: 20mm 10mm;
+}
+
+#root > .MuiContainer-root {
+    padding: 0;
+    margin: 0;
+    max-width: calc(100vw - 48px - 48px);
+    box-sizing: border-box;
+}
+
+#root > .MuiContainer-root > .MuiPaper-root {
+    margin: 0;
+    width: 100%;
+    box-shadow: none;
+}
+
+#root .cv-section-page-break {
+    page-break-after: always;
+}
+
+#root .MuiChip-root {
+    border: none !important;
+    margin: 0 !important;
+    opacity: 0.6;
+}
+
+.MuiTimelineItem-root,
+.MuiSkillItem-root {
+    page-break-inside: avoid;
+}
+
+.cv-signature-footer {
+    position: fixed;
+    right: 10mm;
+    bottom: 0;
+}
+
+.cv-signature-footer img{
+    height: 10mm;
+}
+
+.cv-signature-footer > .cv-overengineerd-text{
+    display: none;
+}
