@@ -6,6 +6,8 @@ body {
     padding: 0;
 
     color: black !important;
+    font: 12pt Georgia, 'Times New Roman', Times, serif !important;
+    line-height: 1.3 !important;
 }
 
 @page {
@@ -36,21 +38,25 @@ body {
     opacity: 0.6;
 }
 
-.MuiTimelineItem-root,
-.MuiSkillItem-root {
+#root .MuiTimelineItem-root,
+#root .MuiSkillItem-root {
     page-break-inside: avoid;
 }
 
-.cv-signature-footer {
+#root .cv-signature-footer {
     position: fixed;
     right: 10mm;
     bottom: 0;
 }
 
-.cv-signature-footer img{
+#root .cv-signature-footer img {
     height: 10mm;
 }
 
-.cv-signature-footer > .cv-overengineerd-text{
+#root .cv-signature-footer > .cv-overengineerd-text {
+    display: none;
+}
+
+#root .cv-fabs {
     display: none;
 }

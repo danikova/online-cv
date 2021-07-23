@@ -4,6 +4,7 @@ import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { Profile } from './Profile';
 import { Signature } from './Signature';
 import { Sections } from './Sections';
+import { Actions } from './Actions';
 
 const theme = createTheme({
     palette: {
@@ -37,6 +38,7 @@ function CV() {
                     <Profile />
                     <Sections />
                     <Signature />
+                    <Actions />
                 </Paper>
             </Container>
         </ThemeProvider>
