@@ -3,8 +3,8 @@ import Section from './Section';
 import WorkIcon from '@material-ui/icons/Work';
 import { Timeline, TimelineItem } from '../Timeline';
 import { Box, createStyles, makeStyles, Typography } from '@material-ui/core';
+import humanizeDuration from 'humanize-duration';
 import Moment from 'react-moment';
-import moment from 'moment';
 
 export const useStyles = makeStyles((theme) =>
     createStyles({
@@ -83,14 +83,11 @@ function WorkYears({ from, to, present = false }) {
     from = new Date(from);
     to = new Date(to);
 
-    const diffDuration = moment.duration(moment(to).diff(moment(from)));
-    let durationText = moment
-        .duration(diffDuration.months(), 'month')
-        .humanize();
-    if (diffDuration.years() !== 0)
-        durationText = `${moment
-            .duration(diffDuration.years(), 'year')
-            .humanize()} ${durationText}`;
+    const durationText = humanizeDuration(to - from, {
+        language: 'hu',
+        units: ['y', 'mo'],
+        round: true,
+    });
 
     return (
         <Box>
