@@ -117,6 +117,7 @@ export function WorkSection() {
             icon={WorkIcon}
             title='Szakmai tapasztalatok'
             className={classes.workSectionRoot}
+            pageBreak={true}
         >
             {sumWorkData.map((item, i) => (
                 <Box key={`company-list-${i}`}>

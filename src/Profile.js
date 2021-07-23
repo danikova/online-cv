@@ -27,7 +27,7 @@ export function Profile() {
 
     return (
         <Grid container spacing={3} className={classes.profileRoot}>
-            <Grid item xs={12} sm={'auto'}>
+            <Grid item xs={4} sm={'auto'}>
                 <Avatar
                     src='/profile.picture.jpg'
                     variant='square'
@@ -35,7 +35,7 @@ export function Profile() {
                     className={classes.largeAvatar}
                 />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={8} sm={6}>
                 <Typography noWrap={true} variant='h2'>
                     Kovács Dániel
                 </Typography>

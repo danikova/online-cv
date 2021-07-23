@@ -32,8 +32,8 @@ export function Signature() {
     const classes = useStyles();
 
     return (
-        <Box className={classes.wrapper}>
-            <Box className={classes.textWrapper}>
+        <Box className={`${classes.wrapper} cv-signature-footer`}>
+            <Box className={`${classes.textWrapper} cv-overengineerd-text`}>
                 <Typography>overengineered by</Typography>
                 <Link href='https://github.com/danikova'>danikova</Link>
             </Box>

@@ -142,9 +142,9 @@ export function SkillsSection() {
     const classes = useStyles();
 
     return (
-        <Section icon={BarChartIcon} title='Szakmai ismeretek'>
+        <Section icon={BarChartIcon} title='Szakmai ismeretek' pageBreak={true}>
             {sumSkillData.map((item, i) => (
-                <Box key={`skill-item-${i}`}>
+                <Box key={`skill-item-${i}`} className='MuiSkillItem-root'>
                     <Typography>{item.name}</Typography>
                     <LinearProgress
                         variant='determinate'

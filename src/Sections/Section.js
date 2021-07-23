@@ -13,19 +13,30 @@ const styles = (theme) => ({
 
 class Section extends React.Component {
     render() {
-        const { icon: Icon, classes, title, children, ...props } = this.props;
+        const {
+            icon: Icon,
+            classes,
+            title,
+            children,
+            pageBreak = false,
+            ...props
+        } = this.props;
         return (
             <Box {...props}>
-                <Grid container spacing={3}>
-                    <Grid item md={'auto'}>
+                <Grid
+                    container
+                    spacing={3}
+                    className={pageBreak ? 'cv-section-page-break' : ''}
+                >
+                    <Grid item xs={'auto'}>
                         <Icon className={classes.mediumIcon} />
                     </Grid>
-                    <Grid item sm={'auto'}>
+                    <Grid item xs={'auto'}>
                         <Typography noWrap={true} variant='h6'>
                             {title}
                         </Typography>
                     </Grid>
-                    <Grid item sm={12}>
+                    <Grid item xs={12}>
                         <Box className={classes.sectionContent}>{children}</Box>
                     </Grid>
                 </Grid>
