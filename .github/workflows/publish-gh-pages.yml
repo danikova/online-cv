@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-      - name: Deploy with gh-pages
+      - name: Install dependecies and build
         run: npm install && npm run build
       - name: Deploy with gh-pages
         run: |
