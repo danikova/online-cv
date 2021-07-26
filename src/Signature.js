@@ -38,7 +38,7 @@ export function Signature() {
                 <Link href='https://github.com/danikova'>danikova</Link>
             </Box>
             <img
-                src='/signature.png'
+                src={`${process.env.PUBLIC_URL}/signature.png`}
                 alt='signature'
                 className={classes.signature}
             />
