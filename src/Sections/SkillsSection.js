@@ -31,7 +31,8 @@ const sumSkillData = [
     {
         name: 'Python',
         percent: 75,
-        message: 'asd asd',
+        message:
+            'Sokféle webes keretrendszert használtam, legtöbb tapasztalatomat Djangoban szereztem, de használtam kisebb projectekre Flask-t és AIOHTTP-t is. Résztvettem egy belső tool tervezésében/fejlesztésében, amit havonta közel 1000 ember használt. Ezenkívül van tapasztalatom YANG alapú konfigurációk feldolgozásában.',
         skillChips: [
             'Django',
             'aiohttp',
@@ -53,7 +54,8 @@ const sumSkillData = [
     {
         name: 'JavaScript',
         percent: 62,
-        message: 'asd asd',
+        message:
+            'Dolgoztam a nagyobb kliens oldali webes keretrendszerekben is, volt egy project ami kb fél évig futott abban Angular-t hasznaltunk, de az időm nagy többségét, közel 2 évet, React-ban töltöttem.',
         skillChips: [
             '@ag-grid-community/core',
             '@material-ui/core',
@@ -87,7 +89,8 @@ const sumSkillData = [
     {
         name: 'Linux',
         percent: 65,
-        message: '',
+        message:
+            'Munkában is és otthon is linuxot használok mint elsőszámú operációs rendszer, már évek óta. A különböző fejlesztéseinket is linux alapú szervereken hosztoljuk, azok a fenntartásán is dolgoztam.',
         skillChips: [
             'Lubuntu',
             'Ubuntu',
@@ -125,7 +128,7 @@ const sumSkillData = [
             'docker',
             'centos',
             'python',
-            'minio'
+            'minio',
         ],
         urlTemplate: (imageName) => `https://hub.docker.com/_/${imageName}`,
     },
