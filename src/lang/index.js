@@ -7,6 +7,9 @@ import { IntlProvider } from 'react-intl';
 import Hungarian from './hu.json';
 import English from './en.json';
 
+// const Hungarian = {};
+// const English = {};
+
 const LANG_COOKIE = 'lang.cookie';
 const LangContext = React.createContext();
 

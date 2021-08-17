@@ -9,6 +9,7 @@ import {
     makeStyles,
     Typography,
 } from '@material-ui/core';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 const globalCollator = new Intl.Collator(undefined, {
     numeric: true,
@@ -31,8 +32,7 @@ const sumSkillData = [
     {
         name: 'Python',
         percent: 75,
-        message:
-            'Sokféle webes keretrendszert használtam, legtöbb tapasztalatomat Djangoban szereztem, de használtam kisebb projectekre Flask-t és AIOHTTP-t is. Résztvettem egy belső tool tervezésében/fejlesztésében, amit havonta közel 1000 ember használt. Ezenkívül van tapasztalatom YANG alapú konfigurációk feldolgozásában.',
+        description: 'skills.python.description',
         skillChips: [
             'Django',
             'aiohttp',
@@ -54,8 +54,7 @@ const sumSkillData = [
     {
         name: 'JavaScript',
         percent: 62,
-        message:
-            'Dolgoztam a nagyobb kliens oldali webes keretrendszerekben is, volt egy project ami kb fél évig futott abban Angular-t hasznaltunk, de az időm nagy többségét, közel 2 évet, React-ban töltöttem.',
+        description: 'skills.js.description',
         skillChips: [
             '@ag-grid-community/core',
             '@material-ui/core',
@@ -89,8 +88,7 @@ const sumSkillData = [
     {
         name: 'Linux',
         percent: 65,
-        message:
-            'Munkában is és otthon is linuxot használok mint elsőszámú operációs rendszer, már évek óta. A különböző fejlesztéseinket is linux alapú szervereken hosztoljuk, azok a fenntartásán is dolgoztam.',
+        description: 'skills.linux.description',
         skillChips: [
             'Lubuntu',
             'Ubuntu',
@@ -105,7 +103,7 @@ const sumSkillData = [
     {
         name: 'Docker',
         percent: 63,
-        message: '',
+        description: 'skills.docker.description',
         skillChips: [
             'node',
             'mysql',
@@ -135,7 +133,7 @@ const sumSkillData = [
     {
         name: 'Kubernetes',
         percent: 40,
-        message: '',
+        description: 'skills.kubernetes.description',
         skillChips: [],
         urlTemplate: (pkgName) => `https://pypi.org/project/${pkgName}/`,
     },
@@ -143,9 +141,14 @@ const sumSkillData = [
 
 export function SkillsSection() {
     const classes = useStyles();
+    const intl = useIntl();
 
     return (
-        <Section icon={BarChartIcon} title='Szakmai ismeretek' pageBreak={true}>
+        <Section
+            icon={BarChartIcon}
+            title={intl.formatMessage({ id: 'skills.sectionTitle' })}
+            pageBreak={true}
+        >
             {sumSkillData.map((item, i) => (
                 <Box key={`skill-item-${i}`} className='MuiSkillItem-root'>
                     <Typography>{item.name}</Typography>
@@ -153,7 +156,9 @@ export function SkillsSection() {
                         variant='determinate'
                         value={item.percent}
                     />
-                    <Typography variant='caption'>{item.message}</Typography>
+                    <Typography variant='caption'>
+                        <FormattedMessage id={item.description} />
+                    </Typography>
                     <Box className={classes.chipsWrapper}>
                         {item.skillChips
                             .sort(globalCollator.compare)

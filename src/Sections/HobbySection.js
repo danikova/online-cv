@@ -2,27 +2,35 @@ import React from 'react';
 import Section from './Section';
 import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike';
 import { List, ListItem, ListItemText } from '@material-ui/core';
+import { useIntl } from 'react-intl';
 
 export function HobbySection() {
+    const intl = useIntl();
+
     return (
-        <Section icon={DirectionsBikeIcon} title='Hobby, szabadidő'>
+        <Section
+            icon={DirectionsBikeIcon}
+            title={intl.formatMessage({ id: 'hobby.sectionTitle' })}
+        >
             <List>
                 <ListItem>
                     <ListItemText
-                        primary='programozok'
-                        secondary='legyen szó 3d-s dolgokról vagy saját játék fejlesztéséről esetleg saját weboldalakról'
+                        primary={intl.formatMessage({
+                            id: 'hobby.programing.title',
+                        })}
+                        secondary={intl.formatMessage({
+                            id: 'hobby.programing.description',
+                        })}
                     />
                 </ListItem>
                 <ListItem>
                     <ListItemText
-                        primary='biciklizek'
-                        secondary='aktivan kerékpárral közlekedek a városban, szeretek hosszabb távokat tekerni'
-                    />
-                </ListItem>
-                <ListItem>
-                    <ListItemText
-                        primary='kerékpár szerelés'
-                        secondary='a nulláról építettem már több biciklit is'
+                        primary={intl.formatMessage({
+                            id: 'hobby.cycling.title',
+                        })}
+                        secondary={intl.formatMessage({
+                            id: 'hobby.cycling.description',
+                        })}
                     />
                 </ListItem>
             </List>

@@ -6,6 +6,7 @@ import { Box, createStyles, makeStyles, Typography } from '@material-ui/core';
 import humanizeDuration from 'humanize-duration';
 import Moment from 'react-moment';
 import { useLocale } from '../lang';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 export const useStyles = makeStyles((theme) =>
     createStyles({
@@ -33,48 +34,43 @@ export const useStyles = makeStyles((theme) =>
 
 const sumWorkData = [
     {
-        company: 'Nokia Solutions and Networks Kft.',
+        company: 'work.nokia',
         timeline: [
             {
                 from: '2020.01.01',
                 to: Date(),
                 present: true,
-                title: 'Software Specialist',
-                caption:
-                    'Python Django alapú webes alkalmazás fejlesztése, React klienssel ami YANG alapú adatszerkezeteket kezel és validál. Több konténeres struktúrával, amit eleinte Docker Compose-al OpenStack-be, majd Kubernetes-el saját Cloudok-ba szállítottunk a vevőkhöz.',
+                title: 'work.nokiaSWSpecialist.title',
+                caption: 'work.nokiaSWSpecialist.caption',
             },
             {
                 from: '2019.07.01',
                 to: '2020.01.01',
-                title: 'Verification Specialist',
-                caption:
-                    'Python webes alkalmazások fejleztését, karbantartását végeztem a System Verification csapat számára, a fő cél az automatizálás volt.',
+                title: 'work.nokiaVerificationSpecialist.title',
+                caption: 'work.nokiaVerificationSpecialist.caption',
             },
             {
                 from: '2018.04.01',
                 to: '2019.07.01',
-                title: 'DevOps Engineer',
-                caption:
-                    'Egy flexibilis monitorozó rendszert fejlesztettem bele a termékünkben, ami képes volt baremetal és hálózati statisztikák gyűjtésére, ezen felül több biztonsági fejlesztésen dolgoztam.',
+                title: 'work.nokiaDevOpsEngineer.title',
+                caption: 'work.nokiaDevOpsEngineer.caption',
             },
             {
                 from: '2017.04.01',
                 to: '2018.04.01',
-                title: 'Software Developer Intern',
-                caption:
-                    'Egy webes, YANG-on alapuló konfiguráció tool-on dolgoztam.',
+                title: 'work.nokiaSWDeveloperIntern.title',
+                caption: 'work.nokiaSWDeveloperIntern.caption',
             },
         ],
     },
     {
-        company: 'Cadline Kft.',
+        company: 'work.cadline',
         timeline: [
             {
                 from: '2016.06.01',
                 to: '2016.08.01',
-                title: 'Software Developer Intern',
-                caption:
-                    'Résztvettem az Archline.XP belsőépítészeti szoftver fejleszésén, egy falburkoló algoritmuson dolgoztam ami képes véletlen méretű négyszögekkel lefedni egyz adott területet.',
+                title: 'work.cadlineSWDeveloperIntern.title',
+                caption: 'work.cadlineSWDeveloperIntern.caption',
             },
         ],
     },
@@ -114,17 +110,20 @@ function WorkYears({ from, to, present = false }) {
 
 export function WorkSection() {
     const classes = useStyles();
+    const intl = useIntl();
 
     return (
         <Section
             icon={WorkIcon}
-            title='Szakmai tapasztalatok'
+            title={intl.formatMessage({ id: 'work.sectionTitle' })}
             className={classes.workSectionRoot}
             pageBreak={true}
         >
             {sumWorkData.map((item, i) => (
                 <Box key={`company-list-${i}`}>
-                    <Typography variant={'h6'}>{item.company}</Typography>
+                    <Typography variant={'h6'}>
+                        <FormattedMessage id={item.company} />
+                    </Typography>
                     <Timeline>
                         {item.timeline.map((timelineData, j) => (
                             <TimelineItem
@@ -140,10 +139,14 @@ export function WorkSection() {
                                 content={
                                     <Box>
                                         <Typography>
-                                            {timelineData.title}
+                                            <FormattedMessage
+                                                id={timelineData.title}
+                                            />
                                         </Typography>
                                         <Typography variant={'caption'}>
-                                            {timelineData.caption}
+                                            <FormattedMessage
+                                                id={timelineData.caption}
+                                            />
                                         </Typography>
                                     </Box>
                                 }

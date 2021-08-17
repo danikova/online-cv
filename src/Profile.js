@@ -7,6 +7,7 @@ import {
     Typography,
     Link,
 } from '@material-ui/core';
+import { FormattedMessage } from 'react-intl';
 
 const useStyles = makeStyles((theme) =>
     createStyles({
@@ -37,26 +38,32 @@ export function Profile() {
             </Grid>
             <Grid item xs={8} sm={6}>
                 <Typography noWrap={true} variant='h2'>
-                    Kovács Dániel
+                    <FormattedMessage id='profile.name' />
                 </Typography>
                 <Typography noWrap={true}>
-                    Születési dátum: 1995.09.09
+                    <FormattedMessage id='profile.dateOfBirth.key' />:{' '}
+                    <FormattedMessage id='profile.dateOfBirth.value' />
                 </Typography>
-                <Typography noWrap={true}>Állampolgárság: magyar</Typography>
                 <Typography noWrap={true}>
-                    Tartózkodási hely:
+                    <FormattedMessage id='profile.nationality.key' />:{' '}
+                    <FormattedMessage id='profile.nationality.value' />
+                </Typography>
+                <Typography noWrap={true}>
+                    <FormattedMessage id='profile.location.key' />:
                     <Link href='https://www.google.com/maps/place/Budapest,+XVI.+ker%C3%BClet/@47.5191306,19.1690793,13z/'>
-                        Budapest, XVI. kerület
+                        <FormattedMessage id='profile.location.value' />
                     </Link>
                 </Typography>
                 <Typography noWrap={true}>
-                    Telefon szám:
-                    <Link href='tel:+36705108334'>+36 70 510 8334</Link>
+                    <FormattedMessage id='profile.mobileNumber.key' />:
+                    <Link href='tel:+36705108334'>
+                        <FormattedMessage id='profile.mobileNumber.value' />
+                    </Link>
                 </Typography>
                 <Typography noWrap={true}>
-                    E-mail cím:
+                    <FormattedMessage id='profile.emailAddress.key' />:
                     <Link href='mailto:kovacs.daniel.9509@gmail.com'>
-                        kovacs.daniel.9509@gmail.com
+                        <FormattedMessage id='profile.emailAddress.value' />
                     </Link>
                 </Typography>
             </Grid>
