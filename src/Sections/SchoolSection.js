@@ -17,91 +17,91 @@ export const useStyles = makeStyles((theme) =>
     }),
 );
 
-const gdfSchoolData = [
-    {
-        name: 'informatikai ismeretek',
-        children: [
-            { name: 'SQL adatbázisok' },
-            { name: '.NET keretrendszer' },
-            { name: 'Windows / Linux szerverek üzemeltetése' },
-            { name: 'mesterseges inteligenciai fogalmak' },
-        ],
-    },
-    {
-        name: 'programozasi ismeretek',
-        children: [
-            { name: '.NET keretrendszer' },
-            { name: 'mobil alkalmazás fejlesztés' },
-        ],
-    },
-];
+// const gdfSchoolData = [
+//     {
+//         name: 'informatikai ismeretek',
+//         children: [
+//             { name: 'SQL adatbázisok' },
+//             { name: '.NET keretrendszer' },
+//             { name: 'Windows / Linux szerverek üzemeltetése' },
+//             { name: 'mesterseges inteligenciai fogalmak' },
+//         ],
+//     },
+//     {
+//         name: 'programozasi ismeretek',
+//         children: [
+//             { name: '.NET keretrendszer' },
+//             { name: 'mobil alkalmazás fejlesztés' },
+//         ],
+//     },
+// ];
 
-const pazmanySchoolData = [
-    {
-        name: 'matematikai ismeretek',
-        children: [
-            { name: 'analízis' },
-            { name: 'nulladrendű logikai' },
-            { name: 'gráfelméleti' },
-            { name: 'valószínűség számítási' },
-        ],
-    },
-    {
-        name: 'informatikai ismeretek',
-        children: [
-            {
-                name: 'számítógéphálózati protokollok',
-            },
-        ],
-    },
-    {
-        name: 'programozasi ismeretek',
-        children: [
-            { name: 'különböző adatszerkezetek részletes' },
-            { name: 'algoritmusok tervezése, implementálása' },
-            { name: 'dinamikus weboldalak készítése' },
-        ],
-    },
-];
+// const pazmanySchoolData = [
+//     {
+//         name: 'matematikai ismeretek',
+//         children: [
+//             { name: 'analízis' },
+//             { name: 'nulladrendű logikai' },
+//             { name: 'gráfelméleti' },
+//             { name: 'valószínűség számítási' },
+//         ],
+//     },
+//     {
+//         name: 'informatikai ismeretek',
+//         children: [
+//             {
+//                 name: 'számítógéphálózati protokollok',
+//             },
+//         ],
+//     },
+//     {
+//         name: 'programozasi ismeretek',
+//         children: [
+//             { name: 'különböző adatszerkezetek részletes' },
+//             { name: 'algoritmusok tervezése, implementálása' },
+//             { name: 'dinamikus weboldalak készítése' },
+//         ],
+//     },
+// ];
 
-const wattaySchoolData = [
-    {
-        name: 'informatikus szak',
-        children: [
-            {
-                name: 'szakmai tárgyak',
-                children: [{ name: 'matematika' }, { name: 'informatika' }],
-            },
-        ],
-    },
-];
+// const wattaySchoolData = [
+//     {
+//         name: 'informatikus szak',
+//         children: [
+//             {
+//                 name: 'szakmai tárgyak',
+//                 children: [{ name: 'matematika' }, { name: 'informatika' }],
+//             },
+//         ],
+//     },
+// ];
 
-const petofiSchoolData = [
-    {
-        name: 'hatosztályos gimnáziumi képzés',
-    },
-];
+// const petofiSchoolData = [
+//     {
+//         name: 'hatosztályos gimnáziumi képzés',
+//     },
+// ];
 
 const sumScoolData = [
     {
         year: '2019 - (2021)',
         name: 'Gábor Dénes Főiskola (Távoktatás), Budapest (Magyarország)',
-        data: gdfSchoolData,
+        data: [], //gdfSchoolData,
     },
     {
         year: '2014 - 2019',
         name: 'Pázmány Péter Katolikus Egyetem - Információs Technológiai Kar, Budapest (Magyarország)',
-        data: pazmanySchoolData,
+        data: [], //pazmanySchoolData,
     },
     {
         year: '2011 - 2014',
         name: 'Wattay Középiskola és Szakiskola, Kiskőrös (Magyarország)',
-        data: wattaySchoolData,
+        data: [], //wattaySchoolData,
     },
     {
         year: '2008 - 2011',
         name: 'Kiskőrösi Petőfi Sándor Evangélikus Óvoda, Általános Iskola, Gimnázium és Kertészeti Szakközépiskola, Kiskőrös',
-        data: petofiSchoolData,
+        data: [], //petofiSchoolData,
     },
 ];
 
