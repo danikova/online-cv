@@ -1,3 +1,45 @@
 {
-    
+    "profile.name": "Kovács Dániel",
+
+    "profile.dateOfBirth.key": "Születési dátum",
+    "profile.nationality.key": "Állampolgárság",
+    "profile.location.key": "Tartózkodási hely",
+    "profile.mobileNumber.key": "Telefon szám",
+    "profile.emailAddress.key": "E-mail cím",
+    "profile.dateOfBirth.value": "1995.09.09",
+    "profile.nationality.value": "magyar",
+    "profile.location.value": "Budapest, XVI. kerület",
+    "profile.mobileNumber.value": "+36 70 510 8334",
+    "profile.emailAddress.value": "kovacs.daniel.9509@gmail.com",
+
+    "work.sectionTitle": "Szakmai tapasztalatok",
+    "work.nokia": "Nokia Solutions and Networks Kft.",
+    "work.nokiaSWSpecialist.title": "Software Specialist",
+    "work.nokiaSWSpecialist.caption": "Python Django alapú webes alkalmazás fejlesztése, React klienssel ami YANG alapú adatszerkezeteket kezel és validál. Több konténeres struktúrával, amit eleinte Docker Compose-al OpenStack-be, majd Kubernetes-el saját Cloudok-ba szállítottunk a vevőkhöz.",
+    "work.nokiaVerificationSpecialist.title": "Verification Specialist",
+    "work.nokiaVerificationSpecialist.caption": "Python webes alkalmazások fejleztését, karbantartását végeztem a System Verification csapat számára, a fő cél az automatizálás volt.",
+    "work.nokiaDevOpsEngineer.title": "DevOps Engineer",
+    "work.nokiaDevOpsEngineer.caption": "Egy flexibilis monitorozó rendszert fejlesztettem bele a termékünkben, ami képes volt baremetal és hálózati statisztikák gyűjtésére, ezen felül több biztonsági fejlesztésen dolgoztam.",
+    "work.nokiaSWDeveloperIntern.title": "Software Developer Intern",
+    "work.nokiaSSWDeveloperIntern.caption": "Egy webes, YANG-on alapuló konfiguráció tool-on dolgoztam.",
+    "work.cadline": "Cadline Kft.",
+    "work.cadlineSWDeveloperIntern.title": "Software Developer Intern",
+    "work.cadlineSWDeveloperIntern.caption": "Résztvettem az Archline.XP belsőépítészeti szoftver fejleszésén, egy falburkoló algoritmuson dolgoztam ami képes véletlen méretű négyszögekkel lefedni egyz adott területet.",
+
+    "skills.sectionTitle": "Szakmai ismeretek",
+    "skills.python.description": "Sokféle webes keretrendszert használtam, legtöbb tapasztalatomat Djangoban szereztem, de használtam kisebb projectekre Flask-t és AIOHTTP-t is. Résztvettem egy belső tool tervezésében/fejlesztésében, amit havonta közel 1000 ember használt. Ezenkívül van tapasztalatom YANG alapú konfigurációk feldolgozásában.",
+    "skills.js.description": "Dolgoztam a nagyobb kliens oldali webes keretrendszerekben is, volt egy project ami kb fél évig futott abban Angular-t hasznaltunk, de az időm nagy többségét, közel 2 évet, React-ban töltöttem.",
+    "skills.linux.description": "Munkában is és otthon is linuxot használok mint elsőszámú operációs rendszer, már évek óta. A különböző fejlesztéseinket is linux alapú szervereken hosztoljuk, azok a fenntartásán is dolgoztam.",
+    "skills.docker.description": "",
+    "skills.kubernetes.description": "",
+
+    "lang.sectionTitle": "Nyelvi ismeretek",
+    "lang.english": "Angol",
+    "lang.englsih.levelDescription": "társalgasi szint, szakmai nyelv",
+
+    "hobby.sectionTitle": "Hobby, szabadidő",
+    "hobby.programing.title": "programozok",
+    "hobby.programing.description": "legyen szó 3d-s dolgokról vagy saját játék fejlesztéséről esetleg saját weboldalakról",
+    "hobby.cycling.title": "biciklizek, biciklit szerelek",
+    "hobby.cycling.description": "aktivan kerékpárral közlekedek a városban, szeretek hosszabb távokat tekerni, a építettem át, újj0tottam föl, számos kerékpárt"
 }
