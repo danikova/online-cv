@@ -5,6 +5,7 @@ import { Timeline, TimelineItem } from '../Components/Timeline';
 import { Box, createStyles, makeStyles, Typography } from '@material-ui/core';
 import humanizeDuration from 'humanize-duration';
 import Moment from 'react-moment';
+import { useLocale } from '../lang';
 
 export const useStyles = makeStyles((theme) =>
     createStyles({
@@ -80,11 +81,12 @@ const sumWorkData = [
 ];
 
 function WorkYears({ from, to, present = false }) {
+    const { locale } = useLocale();
     from = new Date(from);
     to = new Date(to);
 
     const durationText = humanizeDuration(to - from, {
-        language: 'hu',
+        language: locale,
         units: ['y', 'mo'],
         round: true,
     });
@@ -92,7 +94,7 @@ function WorkYears({ from, to, present = false }) {
     return (
         <Box>
             <Typography color='textSecondary' className='date'>
-                <Moment format='YYYY MMM' withTitle>
+                <Moment format='YYYY MMM' withTitle locale={locale}>
                     {from}
                 </Moment>
                 <span className='dash'>-</span>
@@ -100,6 +102,7 @@ function WorkYears({ from, to, present = false }) {
                     format='YYYY MMM'
                     withTitle
                     className={present ? 'present' : ''}
+                    locale={locale}
                 >
                     {to}
                 </Moment>
