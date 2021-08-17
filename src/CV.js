@@ -5,16 +5,17 @@ import { Profile } from './Profile';
 import { Signature } from './Signature';
 import { Sections } from './Sections';
 import { Actions } from './Actions';
+import { useLocale } from './lang';
 
 const theme = createTheme({
     palette: {
         primary: {
             main: '#5584b1',
-            contrastText: '#fff'
+            contrastText: '#fff',
         },
         secondary: {
             main: '#f8f3ea',
-            contrastText: '#303030'
+            contrastText: '#303030',
         },
     },
 });
@@ -30,16 +31,21 @@ const useStyles = makeStyles(() =>
 
 function CV() {
     const classes = useStyles();
+    const { locale } = useLocale();
 
     return (
         <ThemeProvider theme={theme}>
             <Container maxWidth='md' disableGutters={true}>
-                <Paper elevation={3} className={classes.cvPaper}>
+                <Paper
+                    elevation={3}
+                    className={`${classes.cvPaper} fade-in`}
+                    key={locale}
+                >
                     <Profile />
                     <Sections />
                     <Signature />
-                    <Actions />
                 </Paper>
+                <Actions />
             </Container>
         </ThemeProvider>
     );
