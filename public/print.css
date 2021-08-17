@@ -41,6 +41,10 @@ body {
     opacity: 0.6;
 }
 
+#root .cv-chipsWrapper {
+    max-width: 100%;
+}
+
 #root .MuiTimelineItem-root,
 #root .MuiSkillItem-root {
     page-break-inside: avoid;

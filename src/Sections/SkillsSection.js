@@ -159,7 +159,7 @@ export function SkillsSection() {
                     <Typography variant='caption'>
                         <FormattedMessage id={item.description} />
                     </Typography>
-                    <Box className={classes.chipsWrapper}>
+                    <Box className={`${classes.chipsWrapper} cv-chipsWrapper`}>
                         {item.skillChips
                             .sort(globalCollator.compare)
                             .map((chipName, j) => {
