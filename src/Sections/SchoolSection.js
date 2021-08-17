@@ -3,8 +3,8 @@ import Section from './Section';
 import SchoolIcon from '@material-ui/icons/School';
 
 import { Box, createStyles, makeStyles, Typography } from '@material-ui/core';
-import { StaticRecursiveTreeView } from '../StaticRecursiveTreeView';
-import { Timeline, TimelineItem } from '../Timeline';
+import { StaticRecursiveTreeView } from '../Components/StaticRecursiveTreeView';
+import { Timeline, TimelineItem } from '../Components/Timeline';
 
 export const useStyles = makeStyles((theme) =>
     createStyles({

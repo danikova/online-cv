@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from './Section';
 import WorkIcon from '@material-ui/icons/Work';
-import { Timeline, TimelineItem } from '../Timeline';
+import { Timeline, TimelineItem } from '../Components/Timeline';
 import { Box, createStyles, makeStyles, Typography } from '@material-ui/core';
 import humanizeDuration from 'humanize-duration';
 import Moment from 'react-moment';
