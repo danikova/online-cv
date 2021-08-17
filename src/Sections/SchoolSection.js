@@ -112,7 +112,6 @@ export function SchoolSection() {
             icon={SchoolIcon}
             title='Tanulmányok'
             className={classes.schoolSectionRoot}
-            pageBreak={true}
         >
             <Timeline>
                 {sumScoolData.map((item, i) => (
