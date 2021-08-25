@@ -15,6 +15,14 @@ export function LanguagesSection() {
             <List>
                 <ListItem>
                     <ListItemText
+                        primary={intl.formatMessage({ id: 'lang.hungarian' })}
+                        secondary={intl.formatMessage({
+                            id: 'lang.hungarian.levelDescription',
+                        })}
+                    />
+                </ListItem>
+                <ListItem>
+                    <ListItemText
                         primary={intl.formatMessage({ id: 'lang.english' })}
                         secondary={intl.formatMessage({
                             id: 'lang.english.levelDescription',

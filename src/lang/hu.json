@@ -34,6 +34,8 @@
     "skills.kubernetes.description": " ",
 
     "lang.sectionTitle": "Nyelvi ismeretek",
+    "lang.hungarian": "Magyar",
+    "lang.hungarian.levelDescription": "anyanyelvi szint",
     "lang.english": "Angol",
     "lang.english.levelDescription": "társalgasi szint, szakmai nyelv",
 

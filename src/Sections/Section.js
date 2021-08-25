@@ -7,7 +7,7 @@ const styles = (theme) => ({
         fontSize: 32,
     },
     sectionContent: {
-        margin: '0 0 0.5in 0.1in',
+        margin: '0 0 0.2in 0.1in',
     },
 });
 
