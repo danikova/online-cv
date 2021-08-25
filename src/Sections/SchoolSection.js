@@ -100,7 +100,7 @@ const sumScoolData = [
     },
     {
         year: '2008 - 2011',
-        name: 'Kiskőrösi Petőfi Sándor Evangélikus Óvoda, Általános Iskola, Gimnázium és Kertészeti Szakközépiskola, Kiskőrös',
+        name: 'Kiskőrösi Petőfi Sándor Evangélikus Óvoda, Általános Iskola, Gimnázium és Kertészeti Szakközépiskola, Kiskőrös (Magyarország)',
         data: [], //petofiSchoolData,
     },
 ];
