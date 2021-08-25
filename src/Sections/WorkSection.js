@@ -11,6 +11,11 @@ import { FormattedMessage, useIntl } from 'react-intl';
 export const useStyles = makeStyles((theme) =>
     createStyles({
         workSectionRoot: {
+            [theme.breakpoints.down('sm')]: {
+                '& .MuiTypography-root.MuiTypography-h6.company-name': {
+                    marginTop: '15px',
+                },
+            },
             '& .MuiTimelineOppositeContent-root': {
                 maxWidth: '160px',
                 paddingLeft: 0,
@@ -121,7 +126,7 @@ export function WorkSection() {
         >
             {sumWorkData.map((item, i) => (
                 <Box key={`company-list-${i}`}>
-                    <Typography variant={'h6'}>
+                    <Typography className='company-name' variant={'h6'}>
                         <FormattedMessage id={item.company} />
                     </Typography>
                     <Timeline>

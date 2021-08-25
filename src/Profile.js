@@ -15,6 +15,18 @@ const useStyles = makeStyles((theme) =>
             '& a': {
                 marginLeft: '4px',
             },
+            '@media print': {
+                '& .MuiGrid-grid-sm-12.MuiGrid-grid-md-auto': {
+                    flexGrow: 0,
+                    maxWidth: 'none',
+                    flexBasis: 'auto',
+                },
+                '& .MuiGrid-grid-sm-12.MuiGrid-grid-md-6': {
+                    flexGrow: 0,
+                    maxWidth: '65%',
+                    flexBasis: '65%',
+                },
+            },
         },
         largeAvatar: {
             width: theme.spacing(21),
@@ -28,7 +40,7 @@ export function Profile() {
 
     return (
         <Grid container spacing={3} className={classes.profileRoot}>
-            <Grid item xs={4} sm={'auto'}>
+            <Grid item xs={12} sm={12} md={'auto'}>
                 <Avatar
                     src={`${process.env.PUBLIC_URL}/profile.picture.jpg`}
                     variant='square'
@@ -36,31 +48,31 @@ export function Profile() {
                     className={classes.largeAvatar}
                 />
             </Grid>
-            <Grid item xs={8} sm={6}>
-                <Typography noWrap={true} variant='h2'>
+            <Grid item xs={12} sm={12} md={6}>
+                <Typography variant='h2'>
                     <FormattedMessage id='profile.name' />
                 </Typography>
-                <Typography noWrap={true}>
+                <Typography>
                     <FormattedMessage id='profile.dateOfBirth.key' />:{' '}
                     <FormattedMessage id='profile.dateOfBirth.value' />
                 </Typography>
-                <Typography noWrap={true}>
+                <Typography>
                     <FormattedMessage id='profile.nationality.key' />:{' '}
                     <FormattedMessage id='profile.nationality.value' />
                 </Typography>
-                <Typography noWrap={true}>
+                <Typography>
                     <FormattedMessage id='profile.location.key' />:
                     <Link href='https://www.google.com/maps/place/Budapest,+XVI.+ker%C3%BClet/@47.5191306,19.1690793,13z/'>
                         <FormattedMessage id='profile.location.value' />
                     </Link>
                 </Typography>
-                <Typography noWrap={true}>
+                <Typography>
                     <FormattedMessage id='profile.mobileNumber.key' />:
                     <Link href='tel:+36705108334'>
                         <FormattedMessage id='profile.mobileNumber.value' />
                     </Link>
                 </Typography>
-                <Typography noWrap={true}>
+                <Typography>
                     <FormattedMessage id='profile.emailAddress.key' />:
                     <Link href='mailto:kovacs.daniel.9509@gmail.com'>
                         <FormattedMessage id='profile.emailAddress.value' />

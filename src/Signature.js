@@ -7,12 +7,17 @@ import {
     Typography,
 } from '@material-ui/core';
 
-const useStyles = makeStyles(() =>
+const useStyles = makeStyles((theme) =>
     createStyles({
         wrapper: {
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'flex-end',
+            '@media not print': {
+                [theme.breakpoints.down('sm')]: {
+                    display: 'block',
+                },
+            },
         },
         textWrapper: {
             opacity: 0.5,

@@ -14,6 +14,22 @@ export const useStyles = makeStyles((theme) =>
         timelineRoot: {
             margin: 0,
             padding: 0,
+            '@media not print': {
+                [theme.breakpoints.down('sm')]: {
+                    '& .MuiTimelineItem-root': {
+                        display: 'block !important',
+                    },
+                    '& .MuiTimelineItem-root .MuiTimelineSeparator-root': {
+                        display: 'none',
+                    },
+                    '& .MuiTimelineItem-root .MuiTimelineOppositeContent-root':
+                        {
+                            paddingLeft: 0,
+                            marginTop: '10px',
+                            textAlign: 'left',
+                        },
+                },
+            },
         },
     }),
 );
@@ -21,9 +37,7 @@ export const useStyles = makeStyles((theme) =>
 export function TimelineItem({ oppContent, content, last = false }) {
     return (
         <TimelineItemOriginal>
-            <TimelineOppositeContent>
-                {oppContent}
-            </TimelineOppositeContent>
+            <TimelineOppositeContent>{oppContent}</TimelineOppositeContent>
             <TimelineSeparator>
                 <TimelineDot />
                 {!last && <TimelineConnector />}
