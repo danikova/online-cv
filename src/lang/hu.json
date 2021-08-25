@@ -14,16 +14,16 @@
 
     "work.sectionTitle": "Szakmai tapasztalatok",
     "work.nokia": "Nokia Solutions and Networks Kft.",
-    "work.nokiaSWSpecialist.title": "Software Specialist",
+    "work.nokiaSWSpecialist.title": "Software Specialista",
     "work.nokiaSWSpecialist.caption": "Python Django alapú webes alkalmazás fejlesztése, React klienssel ami YANG alapú adatszerkezeteket kezel és validál. Több konténeres struktúrával, amit eleinte Docker Compose-al OpenStack-be, majd Kubernetes-el saját Cloudok-ba szállítottunk a vevőkhöz.",
-    "work.nokiaVerificationSpecialist.title": "Verification Specialist",
+    "work.nokiaVerificationSpecialist.title": "Software Verification Specialista",
     "work.nokiaVerificationSpecialist.caption": "Python webes alkalmazások fejleztését, karbantartását végeztem a System Verification csapat számára, a fő cél az automatizálás volt.",
-    "work.nokiaDevOpsEngineer.title": "DevOps Engineer",
+    "work.nokiaDevOpsEngineer.title": "DevOps Mérnök",
     "work.nokiaDevOpsEngineer.caption": "Egy flexibilis monitorozó rendszert fejlesztettem bele a termékünkben, ami képes volt baremetal és hálózati statisztikák gyűjtésére, ezen felül több biztonsági fejlesztésen dolgoztam.",
-    "work.nokiaSWDeveloperIntern.title": "Software Developer Intern",
+    "work.nokiaSWDeveloperIntern.title": "Software Fejlesztő Gyakornok",
     "work.nokiaSWDeveloperIntern.caption": "Egy webes, YANG-on alapuló konfiguráció tool-on dolgoztam.",
     "work.cadline": "Cadline Kft.",
-    "work.cadlineSWDeveloperIntern.title": "Software Developer Intern",
+    "work.cadlineSWDeveloperIntern.title": "Software Fejlesztő Gyakornok",
     "work.cadlineSWDeveloperIntern.caption": "Résztvettem az Archline.XP belsőépítészeti szoftver fejleszésén, egy falburkoló algoritmuson dolgoztam ami képes véletlen méretű négyszögekkel lefedni egyz adott területet.",
 
     "skills.sectionTitle": "Szakmai ismeretek",
@@ -43,5 +43,5 @@
     "hobby.programing.title": "programozok",
     "hobby.programing.description": "legyen szó 3d-s dolgokról vagy saját játék fejlesztéséről esetleg saját weboldalakról",
     "hobby.cycling.title": "biciklizek, biciklit szerelek",
-    "hobby.cycling.description": "aktivan kerékpárral közlekedek a városban, szeretek hosszabb távokat tekerni, a építettem át, újj0tottam föl, számos kerékpárt"
+    "hobby.cycling.description": "aktivan kerékpárral közlekedek a városban, szeretek hosszabb távokat tekerni, a építettem át, újjítottam föl számos kerékpárt"
 }

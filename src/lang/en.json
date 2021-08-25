@@ -1,6 +1,47 @@
 {
-    
+    "profile.name": "Dániel Kovács",
+
+    "profile.dateOfBirth.key": "Date of birth",
+    "profile.nationality.key": "Nationality",
+    "profile.location.key": "Location",
+    "profile.mobileNumber.key": "Mobile number",
+    "profile.emailAddress.key": "E-mail address",
+    "profile.dateOfBirth.value": "1995.09.09",
+    "profile.nationality.value": "Hungarian",
+    "profile.location.value": "Budapest, XVI.",
+    "profile.mobileNumber.value": "+36 70 510 8334",
+    "profile.emailAddress.value": "kovacs.daniel.9509@gmail.com",
+
+    "work.sectionTitle": "Work experiences",
+    "work.nokia": "Nokia Solutions and Networks Kft.",
+    "work.nokiaSWSpecialist.title": "Software Specialist",
+    "work.nokiaSWSpecialist.caption": "Developing a business web application which is based on Python Django framework with React frontend, which is capable of handling and validating YANG based configurations. We are using multi container setup for the application deployment, first there was Docker Compose in OpenStack environment, then we switched to Kubernetes.",
+    "work.nokiaVerificationSpecialist.title": "Software Verification Specialist",
+    "work.nokiaVerificationSpecialist.caption": "Developing and maintaining several web based applications for the System Verification team with the main focus on automation.",
+    "work.nokiaDevOpsEngineer.title": "DevOps Engineer",
+    "work.nokiaDevOpsEngineer.caption": "Integrating a flexible monitoring system to our existing product, which was capable of monitoring baremetal and networking components. Besides that i developed many security related improvements.",
+    "work.nokiaSWDeveloperIntern.title": "Software Developer Intern",
+    "work.nokiaSWDeveloperIntern.caption": "Developing a YANG based configuration tool.",
+    "work.cadline": "Cadline Kft.",
+    "work.cadlineSWDeveloperIntern.title": "Software Developer Intern",
+    "work.cadlineSWDeveloperIntern.caption": "Developing a new feature to the Archline.XP software, which was capable to cover up surfaces with uneven rectangles.",
+
+    "skills.sectionTitle": "Work skills",
+    "skills.python.description": "I'm used many web framework, but my most knowledge comes from Django, but for smaller project i used Flask or AIOHTTP. I planned/developed an internal tool which has almost 1000 people per month visit. Besides thath i have some experience with YANG structures.",
+    "skills.js.description": "I'm worked with many popular cliens framework, i have (ca. half year) experience with Angular, but most of my time i worked with React (ca. 2 year)",
+    "skills.linux.description": "I'm using Linux in work as well at my private computer. I have many experience with Linux based server hosting and maintaining.",
+    "skills.docker.description": " ",
+    "skills.kubernetes.description": " ",
+
     "lang.sectionTitle": "Language",
     "lang.hungarian": "Hungarian",
     "lang.hungarian.levelDescription": "nativ",
+    "lang.english": "English",
+    "lang.english.levelDescription": "conversational level, jargon [TODO]",
+
+    "hobby.sectionTitle": "Hobby, free time",
+    "hobby.programing.title": "programing",
+    "hobby.programing.description": "i like to work on smaller project in my free time, for example smaller 3d games and stuff or custom, interesting webpages",
+    "hobby.cycling.title": "riding, building and repairing bicycles",
+    "hobby.cycling.description": "i'm commuting with bike in the city, but i like riding longer distances too, i like fidling with bikes, repairing, maintaning"
 }
