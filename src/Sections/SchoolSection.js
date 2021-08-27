@@ -12,6 +12,8 @@ export const useStyles = makeStyles((theme) =>
             '& .MuiTimelineOppositeContent-root': {
                 maxWidth: '100px',
                 paddingLeft: 0,
+                display: 'flex',
+                justifyContent: 'flex-start'
             },
         },
     }),
@@ -84,7 +86,7 @@ export const useStyles = makeStyles((theme) =>
 
 const sumScoolData = [
     {
-        year: '2019 - (2021)',
+        year: '2019 - ',
         name: 'Gábor Dénes Főiskola (Távoktatás), Budapest (Magyarország)',
         data: [], //gdfSchoolData,
     },

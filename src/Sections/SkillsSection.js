@@ -35,6 +35,7 @@ const sumSkillData = [
         description: 'skills.python.description',
         skillChips: [
             'Django',
+            'djangorestframework',
             'aiohttp',
             'lxml',
             'pytest',
