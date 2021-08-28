@@ -17,10 +17,12 @@ export const supportedLocales = {
     hu: {
         messages: Object.assign({}, English, Hungarian),
         visibleName: 'Hu',
+        title: 'Önéletrajz - Kovács Daniel - Hu'
     },
     en: {
         messages: English,
         visibleName: 'En',
+        title: 'CV - Daniel Kovács - En'
     },
 };
 
@@ -28,7 +30,7 @@ const currentLocal =
     Cookies.get(LANG_COOKIE) || navigator.language.substring(0, 2) || 'hu';
 const currentMsgLocale =
     supportedLocales[currentLocal] || supportedLocales['hu'];
-document.title = `CV - Kovács Dániel ${currentMsgLocale.visibleName}`;
+document.title = currentMsgLocale.title;
 
 const LocaleWrapper = (props) => {
     const [locale, setLocale] = useState(currentLocal);
@@ -41,7 +43,7 @@ const LocaleWrapper = (props) => {
         Cookies.set(LANG_COOKIE, newLocale);
         setLocale(newLocale);
         setMessages(newMsgLocale.messages);
-        document.title = `CV - Kovács Dániel ${newMsgLocale.visibleName}`;
+        document.title = newMsgLocale.title;
     }
 
     return (
