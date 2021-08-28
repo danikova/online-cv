@@ -96,7 +96,6 @@ const sumSkillData = [
             'CentOS',
             'Rocky_Linux',
             'Alpine_Linux',
-            'Ubuntu',
         ],
         urlTemplate: (distroName) =>
             `https://en.wikipedia.org/wiki/${distroName}`,
