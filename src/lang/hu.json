@@ -33,6 +33,11 @@
     "skills.docker.description": " ",
     "skills.kubernetes.description": " ",
 
+    "school.gdf.name": "Gábor Dénes Főiskola (Távoktatás), Budapest (Magyarország)",
+    "school.itk.name": "Pázmány Péter Katolikus Egyetem - Információs Technológiai Kar, Budapest (Magyarország)",
+    "school.wattay.name": "Wattay Középiskola és Szakiskola, Kiskőrös (Magyarország)",
+    "school.petofi.name": "Kiskőrösi Petőfi Sándor Evangélikus Óvoda, Általános Iskola, Gimnázium és Kertészeti Szakközépiskola, Kiskőrös (Magyarország)",
+
     "lang.sectionTitle": "Nyelvi ismeretek",
     "lang.hungarian": "Magyar",
     "lang.hungarian.levelDescription": "anyanyelvi szint",

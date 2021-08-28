@@ -33,6 +33,11 @@
     "skills.docker.description": " ",
     "skills.kubernetes.description": " ",
 
+    "school.gdf.name": "Denis Gabor College (distance learning), Budapest (Hungary)",
+    "school.itk.name": "Pázmány Péter Catholic University - Faculty of Information Technology and Bionics, Budapest (Hungary)",
+    "school.wattay.name": "Wattay high school, Kiskőrös (Hungary)",
+    "school.petofi.name": "Kiskőrösi Petőfi Sándor high school, Kiskőrös (Hungary)",
+
     "lang.sectionTitle": "Language",
     "lang.hungarian": "Hungarian",
     "lang.hungarian.levelDescription": "nativ",
