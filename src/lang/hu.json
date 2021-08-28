@@ -17,11 +17,11 @@
     "work.nokiaSWSpecialist.title": "Software Specialista",
     "work.nokiaSWSpecialist.caption": "Python DjangoREST alapú webes alkalmazás fejlesztése, React klienssel ami YANG alapú adatszerkezeteket kezel és validál. Több konténeres struktúrával készült, amit eleinte Docker Compose-al OpenStack-be, majd Kubernetes-szel saját Cloudok-ba szállítottunk a vevőkhöz.",
     "work.nokiaVerificationSpecialist.title": "Software Verification Specialista",
-    "work.nokiaVerificationSpecialist.caption": "Python webes alkalmazások fejlesztését, karbantartását végeztem a System Verification csapat számára akik tesztelték és igazolták a Nokia nagyobb termékeinek helyes működését, a fő cél az automatizálás volt.",
+    "work.nokiaVerificationSpecialist.caption": "Python webes alkalmazások fejlesztését, karbantartását végeztem a System Verification csapat számára akik tesztelték és igazolták a nagyobb termékeinek helyes működését, a fő cél az automatizálás volt.",
     "work.nokiaDevOpsEngineer.title": "DevOps Mérnök",
     "work.nokiaDevOpsEngineer.caption": "Egy flexibilis monitorozó rendszert fejlesztettem a termékünkben, ami képes volt baremetal és hálózati statisztikák gyűjtésére, ezen felül biztonsági fejlesztéseken dolgoztam.",
     "work.nokiaSWDeveloperIntern.title": "Software Fejlesztő Gyakornok",
-    "work.nokiaSWDeveloperIntern.caption": "Python Django alapú, webes, YANG adatstruktúrán alapuló konfigurációs tool-on dolgoztam.",
+    "work.nokiaSWDeveloperIntern.caption": "Python Django alapú, konfigurációs tool-on dolgoztam, amivel belső termékekhez lehetett egyszerűen konfigurációt gyártani vagy meglévőt módosítani.",
     "work.cadline": "Cadline Kft.",
     "work.cadlineSWDeveloperIntern.title": "Software Fejlesztő Gyakornok",
     "work.cadlineSWDeveloperIntern.caption": "Résztvettem az Archline.XP belsőépítészeti szoftver fejlesztésén, egy falburkoló algoritmuson dolgoztam ami képes véletlen méretű négyszögekkel lefedni egy adott területet.",
@@ -43,5 +43,5 @@
     "hobby.programing.title": "programozok",
     "hobby.programing.description": "legyen szó 3d-s dolgokról vagy saját játék fejlesztéséről esetleg saját weboldalakról",
     "hobby.cycling.title": "biciklizek, biciklit szerelek",
-    "hobby.cycling.description": "aktivan kerékpárral közlekedek a városban, szeretek hosszabb távokat tekerni, a építettem át, újjítottam föl számos kerékpárt"
+    "hobby.cycling.description": "aktivan kerékpárral közlekedek a városban, szeretek hosszabb távokat tekerni, építettem át, újjítottam föl számos kerékpárt"
 }
