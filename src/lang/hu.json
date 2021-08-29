@@ -28,8 +28,8 @@
 
     "skills.sectionTitle": "Szakmai ismeretek",
     "skills.python.description": "Sokféle webes keretrendszert használtam, legtöbb tapasztalatomat Django-ban szereztem, azon belül is a DjangoREST-ben, de használtam kisebb projektekre Flask-t és AIOHTTP-t is. Résztvettem egy belső tool tervezésében/fejlesztésében, amit havonta közel 1000 ember használt a világ minden tájáról különböző konfigurációk generálásához, szerkesztéséhez. Ezenkívül van tapasztalatom több millió soros xml fájlok feldolgozásában, YANG adatstruktúrák kezelésében, aszinkron folyamatok implementálásában.",
-    "skills.js.description": "Dolgoztam nagyobb kliens oldali webes keretrendszerekben is, volt egy projekt ami kb fél évig futott abban Angular-t használtunk, de az időm nagy részében - közel 2 évben - React-tal foglalkoztam. Szakdolgozatomat is fullstack JavaScriptben írtam (Node.js - React).",
-    "skills.linux.description": "Munkában is és otthon is linuxot használok, mint elsőszámú operációs rendszer, már évek óta. A különböző fejlesztéseinket is linux alapú szervereken hosztoljuk, azok fenntartásán is dolgoztam.",
+    "skills.js.description": "Dolgoztam nagyobb kliens oldali webes keretrendszerekben is, volt egy projekt ami körülbelül fél évig futott abban Angular-t használtunk, de az időm nagy részében - közel 2 évben - React-tal foglalkoztam. Szakdolgozatomat is fullstack JavaScriptben írtam (Node.js - React).",
+    "skills.linux.description": "Munkában és otthon is linuxot használok, mint elsőszámú operációs rendszer, már évek óta. A különböző fejlesztéseinket is linux alapú szervereken hosztoljuk, azok fenntartásán is dolgoztam.",
     "skills.docker.description": " ",
     "skills.kubernetes.description": " ",
 
@@ -45,8 +45,8 @@
     "lang.english.levelDescription": "társalgasi szint, szakmai nyelv",
 
     "hobby.sectionTitle": "Hobbi, szabadidő",
-    "hobby.programing.title": "programozok",
+    "hobby.programing.title": "programozás",
     "hobby.programing.description": "legyen szó 3d-s dolgokról vagy saját játék fejlesztéséről esetleg saját weboldalakról",
-    "hobby.cycling.title": "biciklizek, biciklit szerelek",
+    "hobby.cycling.title": "biciklizés, szerelés",
     "hobby.cycling.description": "aktivan kerékpárral közlekedek a városban, szeretek hosszabb távokat tekerni, építettem át, újjítottam föl számos kerékpárt"
 }
