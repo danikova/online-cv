@@ -21,7 +21,7 @@ export const useStyles = makeStyles((theme) =>
 
 const sumScoolData = [
     {
-        year: '2019 - ',
+        year: '2019 - 2022',
         name: 'school.gdf.name',
     },
     {
