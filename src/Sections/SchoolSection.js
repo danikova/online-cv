@@ -21,11 +21,11 @@ export const useStyles = makeStyles((theme) =>
 
 const sumScoolData = [
     {
-        year: '2019 - 2022',
+        year: '2018 - 2022',
         name: 'school.gdf.name',
     },
     {
-        year: '2014 - 2019',
+        year: '2014 - 2016',
         name: 'school.itk.name',
     },
     {
