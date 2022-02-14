@@ -4,7 +4,7 @@ import SchoolIcon from '@material-ui/icons/School';
 
 import { Box, createStyles, makeStyles, Typography } from '@material-ui/core';
 import { Timeline, TimelineItem } from '../Components/Timeline';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 export const useStyles = makeStyles((theme) =>
     createStyles({
@@ -40,10 +40,12 @@ const sumScoolData = [
 
 export function SchoolSection() {
     const classes = useStyles();
+    const intl = useIntl();
+    
     return (
         <Section
             icon={SchoolIcon}
-            title='Tanulmányok'
+            title={intl.formatMessage({ id: 'school.sectionTitle' })}
             className={classes.schoolSectionRoot}
         >
             <Timeline>
