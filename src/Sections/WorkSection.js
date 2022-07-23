@@ -42,9 +42,15 @@ const sumWorkData = [
         company: 'work.nokia',
         timeline: [
             {
-                from: '2020.01.01',
-                to: Date(),
+                from: '2022.06.01',
+                to: new Date(),
                 present: true,
+                title: 'work.nokiaWebGUIDev.title',
+                caption: 'work.nokiaWebGUIDev.caption',
+            },
+            {
+                from: '2020.01.01',
+                to: '2022.06.01',
                 title: 'work.nokiaSWSpecialist.title',
                 caption: 'work.nokiaSWSpecialist.caption',
             },

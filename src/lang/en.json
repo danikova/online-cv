@@ -14,6 +14,8 @@
 
     "work.sectionTitle": "Work experiences",
     "work.nokia": "Nokia Solutions and Networks Kft.",
+    "work.nokiaWebGUIDev.title": "Web GUI Developer",
+    "work.nokiaWebGUIDev.caption": " ",
     "work.nokiaSWSpecialist.title": "Software Specialist",
     "work.nokiaSWSpecialist.caption": "Developing a business web application which is based on Python DjangoREST framework with React frontend, that is capable of handling and validating YANG based configurations. We were using a multi-container setup for the application deployment, first there was Docker Compose in OpenStack environment, then we switched to Kubernetes.",
     "work.nokiaVerificationSpecialist.title": "Software Verification Specialist",
