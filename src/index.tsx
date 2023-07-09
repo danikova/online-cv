@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import CV from './CV';
 import './index.css';
 
@@ -8,11 +8,12 @@ import LocaleWrapper from './lang';
 
 export const history = createBrowserHistory();
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(
   <React.StrictMode>
     <LocaleWrapper>
       <CV />
     </LocaleWrapper>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
