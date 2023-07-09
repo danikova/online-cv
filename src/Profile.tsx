@@ -33,7 +33,7 @@ export function Profile() {
   return (
     <Grid container spacing={3} className={classes.profileRoot}>
       <Grid item xs={12} sm={12} md={'auto'}>
-        <Avatar src="/profile.picture.jpg" variant="square" alt="Kovács Dániel" className={classes.largeAvatar} />
+        <Avatar src="./profile.picture.jpg" variant="square" alt="Kovács Dániel" className={classes.largeAvatar} />
       </Grid>
       <Grid item xs={12} sm={12} md={6}>
         <Typography variant="h2">

@@ -35,7 +35,7 @@ export function Signature() {
         <Typography>overengineered by</Typography>
         <Link href="https://github.com/danikova">danikova</Link>
       </Box>
-      <img src="/signature.png" alt="signature" className={classes.signature} />
+      <img src="./signature.png" alt="signature" className={classes.signature} />
     </Box>
   );
 }
