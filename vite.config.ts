@@ -7,7 +7,7 @@ export default defineConfig({
   base: '/online-cv/',
   plugins: [react(), viteTsconfigPaths(), svgrPlugin()],
   server: {
-    open: '/online-cv',
+    open: '/online-cv/',
     port: 3000,
     strictPort: true,
   },
