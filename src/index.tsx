@@ -5,7 +5,7 @@ import './index.css';
 
 import { createBrowserHistory } from 'history';
 import LocaleWrapper from '@lang';
-import GraidentBg from './@components/main/GradientBg';
+import GraidentBg from './@components/GradientBg';
 
 export const history = createBrowserHistory();
 

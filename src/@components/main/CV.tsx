@@ -2,7 +2,7 @@ import '@fontsource/roboto';
 
 import { Profile } from './Profile';
 import { Signature } from './Signature';
-import { Sections } from '@sections';
+import { Sections } from './sections';
 import { Actions } from './Actions';
 import { useLocale } from '@lang';
 
