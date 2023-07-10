@@ -11,7 +11,7 @@ type TimelineProps = {
 }
 
 export default function Timeline({ children }: TimelineProps) {
-  return <div className="grid gap-y-2" style={{
+  return <div className="grid" style={{
     gridTemplateColumns: 'auto 2.5rem 1fr',
   }}>
     {children}
