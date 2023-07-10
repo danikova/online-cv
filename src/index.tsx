@@ -21,7 +21,3 @@ root.render(
     </GradientBg>
   </LocaleWrapper>
 );
-
-onCLS(console.log);
-onFID(console.log);
-onLCP(console.log);

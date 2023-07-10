@@ -21,7 +21,7 @@ export function useDayJs(date: Date, format?: string) {
   const output = useMemo(() => {
     let obj = dayjs(date).locale(locale);
     if (format) return obj.format(format);
-    return obj;
+    return `${obj}`;
   }, [locale, date, format]);
 
   return output;
