@@ -1,6 +1,6 @@
 import { SchoolSection } from './SchoolSection';
-import WorkSection from './WorkSection';
-import { LanguagesSection } from './LanguagesSection';
+import { WorkSection } from './WorkSection';
+import { LanguageSection } from './LanguageSection';
 import { HobbySection } from './HobbySection';
 import { SkillsSection } from './SkillsSection';
 
@@ -10,7 +10,7 @@ const sectionList = [
   WorkSection,
   SkillsSection,
   SchoolSection,
-  LanguagesSection,
+  LanguageSection,
   HobbySection
 ];
 

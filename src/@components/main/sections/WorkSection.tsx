@@ -81,7 +81,7 @@ function WorkYears({ from, to, present = false }) {
   );
 }
 
-export default function WorkSection() {
+export function WorkSection() {
   const intl = useIntl();
 
   return (

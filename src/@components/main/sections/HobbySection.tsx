@@ -1,39 +1,25 @@
 import Section from './BaseSection';
 import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike';
-import { List, ListItem, ListItemText } from '@material-ui/core';
-import { useIntl } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 export function HobbySection() {
   const intl = useIntl();
 
   return (
     <Section
-      // @ts-ignore
       icon={DirectionsBikeIcon}
       title={intl.formatMessage({ id: 'hobby.sectionTitle' })}
     >
-      <List>
-        <ListItem>
-          <ListItemText
-            primary={intl.formatMessage({
-              id: 'hobby.programing.title',
-            })}
-            secondary={intl.formatMessage({
-              id: 'hobby.programing.description',
-            })}
-          />
-        </ListItem>
-        <ListItem>
-          <ListItemText
-            primary={intl.formatMessage({
-              id: 'hobby.cycling.title',
-            })}
-            secondary={intl.formatMessage({
-              id: 'hobby.cycling.description',
-            })}
-          />
-        </ListItem>
-      </List>
+      <div className='flex flex-col gap-4'>
+        <div>
+          <h5 className='font-medium'><FormattedMessage id="hobby.programing.title" /></h5>
+          <div><FormattedMessage id="hobby.programing.description" /></div>
+        </div>
+        <div>
+          <h5 className='font-medium'><FormattedMessage id="hobby.cycling.title" /></h5>
+          <div><FormattedMessage id="hobby.cycling.description" /></div>
+        </div>
+      </div>
     </Section>
   );
 }
