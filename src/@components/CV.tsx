@@ -1,9 +1,9 @@
 import '@fontsource/roboto';
 
-import { Profile } from './Profile';
-import { Signature } from './Signature';
-import { Sections } from './sections';
-import { Actions } from './Actions';
+import { Profile } from './main/Profile';
+import { Signature } from './main/Signature';
+import { Sections } from './main/sections';
+import { Actions } from './main/Actions';
 import { useLocale } from '@lang';
 
 function CV() {

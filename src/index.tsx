@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client';
-import CV from './@components/main/CV';
+import CV from './@components/CV';
 
 import { createBrowserHistory } from 'history';
 import LocaleWrapper from '@lang';
