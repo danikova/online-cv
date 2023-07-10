@@ -1,6 +1,5 @@
 import { createPortal } from 'react-dom';
-import PrintIcon from '@material-ui/icons/Print';
-import TranslateIcon from '@material-ui/icons/Translate';
+import { MdTranslate, MdPrint } from 'react-icons/md';
 import { supportedLocales, useLocale } from '@lang';
 
 const supportedLocaleKeys = Object.keys(supportedLocales);
@@ -30,7 +29,7 @@ export function Actions() {
         }}
         className="fixed right-0 bottom-[calc(4rem)] m-8"
       >
-        <TranslateIcon />
+        <MdTranslate className='text-[25px]' />
       </FAB>
       <FAB
         onClick={() => {
@@ -38,7 +37,7 @@ export function Actions() {
         }}
         className="fixed right-0 bottom-0 m-8"
       >
-        <PrintIcon />
+        <MdPrint className='text-[25px]' />
       </FAB>
     </>,
     document.body

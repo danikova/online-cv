@@ -1,5 +1,5 @@
 import BaseSection from './BaseSection';
-import WorkIcon from '@material-ui/icons/Work';
+import { MdWork } from 'react-icons/md';
 import humanizeDuration from 'humanize-duration';
 import { useLocale } from '@lang';
 import { FormattedMessage, useIntl } from 'react-intl';
@@ -86,7 +86,7 @@ export function WorkSection() {
 
   return (
     <BaseSection
-      icon={WorkIcon}
+      icon={MdWork}
       title={intl.formatMessage({ id: 'work.sectionTitle' })}
     >
       {sumWorkData.map((item, i) => (

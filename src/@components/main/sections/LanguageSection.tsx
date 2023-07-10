@@ -1,5 +1,5 @@
 import BaseSection from './BaseSection';
-import PublicIcon from '@material-ui/icons/Public';
+import { MdPublic } from 'react-icons/md';
 import { FormattedMessage, useIntl } from 'react-intl';
 
 export function LanguageSection() {
@@ -7,7 +7,7 @@ export function LanguageSection() {
 
   return (
     <BaseSection
-      icon={PublicIcon}
+      icon={MdPublic}
       title={intl.formatMessage({ id: 'lang.sectionTitle' })}
     >
       <div className='flex flex-col gap-4'>

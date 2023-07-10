@@ -1,5 +1,5 @@
 import Section from './BaseSection';
-import SchoolIcon from '@material-ui/icons/School';
+import { MdSchool } from 'react-icons/md';
 import Timeline, { TimelineItem } from '@components/Timeline';
 import { FormattedMessage, useIntl } from 'react-intl';
 
@@ -27,7 +27,7 @@ export function SchoolSection() {
 
   return (
     <Section
-      icon={SchoolIcon}
+      icon={MdSchool}
       title={intl.formatMessage({ id: 'school.sectionTitle' })}
     >
       <Timeline>

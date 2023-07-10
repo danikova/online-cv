@@ -1,13 +1,13 @@
-import Section from './BaseSection';
-import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike';
+import BaseSection from './BaseSection';
+import { MdDirectionsBike } from 'react-icons/md';
 import { FormattedMessage, useIntl } from 'react-intl';
 
 export function HobbySection() {
   const intl = useIntl();
 
   return (
-    <Section
-      icon={DirectionsBikeIcon}
+    <BaseSection
+      icon={MdDirectionsBike}
       title={intl.formatMessage({ id: 'hobby.sectionTitle' })}
     >
       <div className='flex flex-col gap-4'>
@@ -20,6 +20,6 @@ export function HobbySection() {
           <div><FormattedMessage id="hobby.cycling.description" /></div>
         </div>
       </div>
-    </Section>
+    </BaseSection>
   );
 }

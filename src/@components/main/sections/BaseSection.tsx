@@ -4,7 +4,7 @@ export default function BaseSection(
   return (
     <div {...props}>
       <div className='flex items-center mb-8'>
-        <Icon className="mr-8" />
+        <Icon className="mr-8 text-[25px]" />
         <h3 className='text-2xl'>
           {title}
         </h3>

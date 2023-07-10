@@ -1,5 +1,5 @@
 import BaseSection from './BaseSection';
-import BarChartIcon from '@material-ui/icons/BarChart';
+import { MdBarChart } from 'react-icons/md';
 import { FormattedMessage, useIntl } from 'react-intl';
 
 const globalCollator = new Intl.Collator(undefined, {
@@ -118,7 +118,7 @@ export function SkillsSection() {
 
   return (
     <BaseSection
-      icon={BarChartIcon}
+      icon={MdBarChart}
       title={intl.formatMessage({ id: 'skills.sectionTitle' })}
     >
       {sumSkillData.map((item, i) => (
