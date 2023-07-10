@@ -141,8 +141,9 @@ export function SkillsSection() {
             <FormattedMessage id={item.description} />
           </div>
           <div className='flex flex-wrap gap-2 mb-8'>
-            {item.skillChips.sort(globalCollator.compare).map((chipName, j) => {
+            {item.skillChips.sort(globalCollator.compare).map((chipName) => {
               return <Chip
+                key={chipName}
                 label={chipName}
                 href={item.urlTemplate && item.urlTemplate(chipName)}
               />
