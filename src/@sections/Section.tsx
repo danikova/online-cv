@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Box, Grid, Typography, withStyles } from '@material-ui/core';
 
 const styles = (theme) => ({

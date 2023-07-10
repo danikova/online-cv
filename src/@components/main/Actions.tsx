@@ -4,7 +4,7 @@ import { Box, createStyles, Fab, Grow, makeStyles } from '@material-ui/core';
 import PrintIcon from '@material-ui/icons/Print';
 import TranslateIcon from '@material-ui/icons/Translate';
 import { ToggleButton, ToggleButtonGroup } from '@material-ui/lab';
-import { supportedLocales, useLocale } from './lang';
+import { supportedLocales, useLocale } from '@lang';
 
 export const useStyles = makeStyles(() =>
   createStyles({

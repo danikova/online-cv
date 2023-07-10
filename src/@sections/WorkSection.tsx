@@ -1,10 +1,10 @@
 import Section from './Section';
 import WorkIcon from '@material-ui/icons/Work';
-import { Timeline, TimelineItem } from '../Components/Timeline';
+import { Timeline, TimelineItem } from '@components/Timeline';
 import { Box, createStyles, makeStyles, Typography } from '@material-ui/core';
 import humanizeDuration from 'humanize-duration';
 // import Moment from 'react-moment';
-import { useLocale } from '../lang';
+import { useLocale } from '@lang';
 import { FormattedMessage, useIntl } from 'react-intl';
 
 export const useStyles = makeStyles((theme) =>
