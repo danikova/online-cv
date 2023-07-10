@@ -8,7 +8,7 @@ function FAB({ children, ...props }) {
   const { className, ...rest } = props;
   return <div className={`
     flex flex-wrap content-center justify-center w-12 h-12 bg-white rounded-full text-black
-    hover:cursor-pointer hover:bg-slate-200/50
+    md:hover:cursor-pointer md:hover:bg-slate-200/50
     md:mix-blend-screen max-md:bg-primary-800 max-md:text-slate-200
     ${className}
   `}

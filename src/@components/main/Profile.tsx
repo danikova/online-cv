@@ -71,7 +71,7 @@ export function Profile() {
           <header className='w-screen h-[4.25rem] bg-slate-200/30 z-10 px-16 pt-4 backdrop-blur-sm max-md:px-4'>
             <div className='min-w-full flex'>
               <HoverContainer className='h-24 w-24'>
-                <img className='h-24 w-24 rounded-2xl' src="./profile.picture.jpg" />
+                <img className='h-24 w-24 rounded-2xl max-md:rounded-md' src="./profile.picture.jpg" />
               </HoverContainer>
               <span className='text-3xl font-bold pl-[1.5rem]'>
                 <FormattedMessage id="profile.name" />
