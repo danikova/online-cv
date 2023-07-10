@@ -1,40 +1,11 @@
-import Section from './Section';
+import BaseSection from './BaseSection';
 import WorkIcon from '@material-ui/icons/Work';
-import { Timeline, TimelineItem } from '@components/Timeline';
-import { Box, createStyles, makeStyles, Typography } from '@material-ui/core';
 import humanizeDuration from 'humanize-duration';
-// import Moment from 'react-moment';
 import { useLocale } from '@lang';
 import { FormattedMessage, useIntl } from 'react-intl';
-
-export const useStyles = makeStyles((theme) =>
-  createStyles({
-    workSectionRoot: {
-      [theme.breakpoints.down('sm')]: {
-        '& .MuiTypography-root.MuiTypography-h6.company-name': {
-          marginTop: '15px',
-        },
-      },
-      '& .MuiTimelineOppositeContent-root': {
-        maxWidth: '160px',
-        paddingLeft: 0,
-        '& .date': {
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          alignContent: 'space-around',
-          '& .dash': {
-            margin: '0 5px',
-          },
-          '& .present': {
-            opacity: 0,
-          },
-        },
-      },
-    },
-    dividerMargin: { margin: '30px' },
-  })
-);
+import Timeline, { TimelineItem } from '@components/Timeline';
+import { useDayJs } from '@utils/hooks';
+import { useMemo } from 'react';
 
 const sumWorkData = [
   {
@@ -88,80 +59,59 @@ const sumWorkData = [
 
 function WorkYears({ from, to, present = false }) {
   const { locale } = useLocale();
-  from = new Date(from);
-  to = new Date(to);
 
-  const durationText = humanizeDuration(to - from, {
+  const fromDate = useMemo(() => new Date(from), [from]);
+  const toDate = useMemo(() => new Date(to), [to]);
+
+  const fromStr = useDayJs(fromDate, "YYYY MMM");
+  const toStr = useDayJs(toDate, "YYYY MMM");
+
+  // @ts-ignore
+  const durationText = useMemo(() => humanizeDuration(toDate - fromDate, {
     language: locale,
     units: ['y', 'mo'],
     round: true,
-  });
+  }), [fromDate, toDate])
 
   return (
-    <Box>
-      <Typography color="textSecondary" className="date">
-        {/* <Moment
-          // format="YYYY MMM"
-          withTitle
-          locale={locale}
-        >
-          {from}
-        </Moment> */}
-        "2022.01"
-        <span className="dash">-</span>
-        {/* <Moment
-          // format="YYYY MMM"
-          withTitle
-          className={present ? 'present' : ''}
-          locale={locale}
-        >
-          {to}
-        </Moment> */}
-        "2022.06"
-      </Typography>
-      <Typography color="textSecondary">{durationText}</Typography>
-    </Box>
+    <div>
+      <p>{fromStr}<span className="px-1">-</span>{present ? '' : toStr}</p>
+      <p>{durationText}</p>
+    </div>
   );
 }
 
-export function WorkSection() {
-  const classes = useStyles();
+export default function WorkSection() {
   const intl = useIntl();
 
   return (
-    <Section
-      // @ts-ignore
+    <BaseSection
       icon={WorkIcon}
       title={intl.formatMessage({ id: 'work.sectionTitle' })}
-      className={classes.workSectionRoot}
-      pageBreak={true}
     >
       {sumWorkData.map((item, i) => (
-        <Box key={`company-list-${i}`}>
-          <Typography className="company-name" variant={'h6'}>
+        <div key={`company-list-${i}`}>
+          <h4 className='text-lg mb-4 font-medium'>
             <FormattedMessage id={item.company} />
-          </Typography>
+          </h4>
           <Timeline>
             {item.timeline.map((timelineData, j) => (
               <TimelineItem
                 key={`timeline-item-${j}`}
                 oppContent={<WorkYears from={timelineData.from} to={timelineData.to} present={timelineData.present} />}
                 last={item.timeline.length - 1 === j}
-                content={
-                  <Box>
-                    <Typography>
-                      <FormattedMessage id={timelineData.title} />
-                    </Typography>
-                    <Typography variant={'caption'}>
-                      <FormattedMessage id={timelineData.caption} />
-                    </Typography>
-                  </Box>
-                }
-              />
+              >
+                <h5 className='font-medium'>
+                  <FormattedMessage id={timelineData.title} />
+                </h5>
+                <div className='mb-4'>
+                  <FormattedMessage id={timelineData.caption} />
+                </div>
+              </TimelineItem>
             ))}
           </Timeline>
-        </Box>
+        </div>
       ))}
-    </Section>
+    </BaseSection>
   );
 }

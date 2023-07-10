@@ -1,4 +1,4 @@
-import Section from './Section';
+import Section from './BaseSection';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import { Box, Chip, createStyles, LinearProgress, makeStyles, Typography } from '@material-ui/core';
 import { FormattedMessage, useIntl } from 'react-intl';

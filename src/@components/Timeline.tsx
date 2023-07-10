@@ -1,55 +1,36 @@
-import TimelineOriginal from '@material-ui/lab/Timeline';
-import TimelineItemOriginal from '@material-ui/lab/TimelineItem';
-import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
-import TimelineConnector from '@material-ui/lab/TimelineConnector';
-import TimelineContent from '@material-ui/lab/TimelineContent';
-import TimelineDot from '@material-ui/lab/TimelineDot';
-import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
-import { createStyles, makeStyles } from '@material-ui/core';
+import { ReactElement } from "react";
 
-export const useStyles = makeStyles((theme) =>
-  createStyles({
-    timelineRoot: {
-      margin: 0,
-      padding: 0,
-      '@media not print': {
-        [theme.breakpoints.down('sm')]: {
-          '& .MuiTimelineItem-root': {
-            display: 'block !important',
-          },
-          '& .MuiTimelineItem-root .MuiTimelineSeparator-root': {
-            display: 'none',
-          },
-          '& .MuiTimelineItem-root .MuiTimelineOppositeContent-root': {
-            paddingLeft: 0,
-            marginTop: '10px',
-            textAlign: 'left',
-          },
-        },
-      },
-    },
-  })
-);
-
-export function TimelineItem({ oppContent, content, last = false }) {
-  return (
-    <TimelineItemOriginal>
-      <TimelineOppositeContent>{oppContent}</TimelineOppositeContent>
-      <TimelineSeparator>
-        <TimelineDot />
-        {!last && <TimelineConnector />}
-      </TimelineSeparator>
-      <TimelineContent>{content}</TimelineContent>
-    </TimelineItemOriginal>
-  );
+type TimelineItemProps = {
+  children: ReactElement | ReactElement[]
+  oppContent: ReactElement
+  last?: boolean
 }
 
-export function Timeline({ children, ...props }) {
-  const classes = useStyles();
+type TimelineProps = {
+  children: ReactElement<TimelineItemProps> | ReactElement<TimelineItemProps>[]
+}
 
-  return (
-    <TimelineOriginal className={classes.timelineRoot} {...props}>
-      {children}
-    </TimelineOriginal>
-  );
+export default function Timeline({ children }: TimelineProps) {
+  return <div className="grid gap-y-2" style={{
+    gridTemplateColumns: 'auto 2.5rem 1fr',
+  }}>
+    {children}
+  </div>
+}
+
+export function TimelineItem({ children, oppContent, last = false }: TimelineItemProps) {
+  return <>
+    <div className="min-h-[80px]">{oppContent}</div>
+    <div className="min-h-[80px] flex flex-col items-center justify-start">
+      <div className="w-full flex flex-[0_0_1.5rem] items-center justify-center">
+        <div className="rounded-full h-4 w-4 ring-2 ring-slate-400" />
+      </div>
+      {!last && <div className="flex flex-auto items-center" >
+        <div className="h-4/5 w-[2px] bg-slate-400" />
+      </div>}
+    </div>
+    <div className="min-h-[80px]">
+      <div>{children}</div>
+    </div>
+  </>
 }

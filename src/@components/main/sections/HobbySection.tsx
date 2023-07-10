@@ -1,4 +1,4 @@
-import Section from './Section';
+import Section from './BaseSection';
 import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike';
 import { List, ListItem, ListItemText } from '@material-ui/core';
 import { useIntl } from 'react-intl';

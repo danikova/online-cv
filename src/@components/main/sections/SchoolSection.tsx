@@ -1,8 +1,8 @@
-import Section from './Section';
+import Section from './BaseSection';
 import SchoolIcon from '@material-ui/icons/School';
 
 import { Box, createStyles, makeStyles, Typography } from '@material-ui/core';
-import { Timeline, TimelineItem } from '@components/Timeline';
+import Timeline, { TimelineItem } from '@components/Timeline';
 import { FormattedMessage, useIntl } from 'react-intl';
 
 export const useStyles = makeStyles((theme) =>

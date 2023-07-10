@@ -1,5 +1,5 @@
 import { SchoolSection } from './SchoolSection';
-import { WorkSection } from './WorkSection';
+import WorkSection from './WorkSection';
 import { LanguagesSection } from './LanguagesSection';
 import { HobbySection } from './HobbySection';
 import { SkillsSection } from './SkillsSection';
@@ -9,7 +9,7 @@ import HoverContainer from '@components/HoverContainer';
 const sectionList = [
   WorkSection,
   SkillsSection,
-  SchoolSection,
+  // SchoolSection,
   LanguagesSection,
   HobbySection
 ];
