@@ -10,47 +10,47 @@ export function Profile() {
 
   return (
     <>
-      <div className='flex gap-8 pb-8'>
+      <header className='flex gap-8 pb-8'>
         <HoverContainer className='h-[300px] w-[300px] basis-[300px]'>
           <img ref={imgRef} className='h-[300px] w-[300px] rounded-2xl' src="./profile.picture.jpg" />
         </HoverContainer>
         <HoverContainer className='flex-auto p-8'>
           <div className='flex-auto'>
             <div className='min-h-full flex flex-col'>
-              <div className='text-3xl font-bold pb-8'>
+              <p className='text-3xl font-bold pb-8'>
                 <FormattedMessage id="profile.name" />
-              </div>
+              </p>
               <div className='grid grid-rows-5 ml-4' style={{
                 gridTemplateColumns: 'auto 1fr',
                 columnGap: '0.5rem'
               }}>
-                <span className='justify-self-end font-medium'>
+                <p className='justify-self-end font-medium'>
                   <FormattedMessage id="profile.dateOfBirth.key" />:
-                </span>
-                <span>
+                </p>
+                <p>
                   <FormattedMessage id="profile.dateOfBirth.value" />
-                </span>
-                <span className='justify-self-end font-medium'>
+                </p>
+                <p className='justify-self-end font-medium'>
                   <FormattedMessage id="profile.nationality.key" />:
-                </span>
-                <span>
+                </p>
+                <p>
                   <FormattedMessage id="profile.nationality.value" />
-                </span>
-                <span className='justify-self-end font-medium'>
+                </p>
+                <p className='justify-self-end font-medium'>
                   <FormattedMessage id="profile.location.key" />:
-                </span>
+                </p>
                 <a href="https://www.google.com/maps/place/Budapest,+XVI.+ker%C3%BClet/@47.5191306,19.1690793,13z/" className='text-primary-900 hover:underline'>
                   <FormattedMessage id="profile.location.value" />
                 </a>
-                <span className='justify-self-end font-medium'>
+                <p className='justify-self-end font-medium'>
                   <FormattedMessage id="profile.mobileNumber.key" />:
-                </span>
+                </p>
                 <a href="tel:+36705108334" className='text-primary-900 hover:underline'>
                   <FormattedMessage id="profile.mobileNumber.value" />
                 </a>
-                <span className='justify-self-end font-medium'>
+                <p className='justify-self-end font-medium'>
                   <FormattedMessage id="profile.emailAddress.key" />:
-                </span>
+                </p>
                 <a href="mailto:kovacs.daniel.9509@gmail.com" className='text-primary-900 hover:underline'>
                   <FormattedMessage id="profile.emailAddress.value" />
                 </a>
@@ -58,7 +58,7 @@ export function Profile() {
             </div>
           </div>
         </HoverContainer>
-      </div>
+      </header>
       <Transition
         show={!isImgVisible}
         enter="duration-75"
