@@ -1,5 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 
+function capRatioPercent(ratio: number) {
+  const percent = ratio * 100;
+  return Math.min(Math.max(0, percent), 100);
+}
+
 export default function GraidentBg({ children }) {
   const [scrollRatio, setScrollRatio] = useState(0);
   const [height, setHeight] = useState(0)
@@ -27,7 +32,7 @@ export default function GraidentBg({ children }) {
     style={{
       backgroundImage: 'linear-gradient(160deg, #4A9AC7, #75B2D5, #CBE2EF, #D9AFD9)',
       backgroundSize: '400% 400%',
-      backgroundPosition: `${scrollRatio * 90}% ${scrollRatio * 90}%`
+      backgroundPosition: `${capRatioPercent(scrollRatio)}% ${capRatioPercent(scrollRatio)}%`
     }}
   >
     {children}

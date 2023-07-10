@@ -24,7 +24,7 @@ animation-duration: 250ms;
   position: relative;
   display: inline-block;
   box-shadow: rgba(13, 38, 76, 0.15) 0px 9px 20px;
-  transition: all 0.3s ease-in-out;
+  transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cm-primary-shadow::after {
@@ -37,11 +37,11 @@ animation-duration: 250ms;
   height: 100%;
   opacity: 0;
   box-shadow: rgba(13, 38, 76, 0.3) 0px 9px 20px;
-  transition: opacity 0.15s ease-in-out;
+  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cm-primary-shadow:hover {
-  transform: translate(-1px, -2px);
+  transform: translate(-1px, -1px);
 }
 
 .cm-primary-shadow:hover::after {

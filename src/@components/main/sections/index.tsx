@@ -1,33 +1,25 @@
-import { Box, createStyles, makeStyles } from '@material-ui/core';
 import { SchoolSection } from './SchoolSection';
 import { WorkSection } from './WorkSection';
 import { LanguagesSection } from './LanguagesSection';
 import { HobbySection } from './HobbySection';
 import { SkillsSection } from './SkillsSection';
 
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    sectionsRoot: {
-      margin: '0.1in 0',
-    },
-    sectionsWrapper: {
-      margin: '0.2in 0',
-    },
-  })
-);
+import HoverContainer from '@components/HoverContainer';
+
+const sectionList = [
+  WorkSection,
+  SkillsSection,
+  SchoolSection,
+  LanguagesSection,
+  HobbySection
+];
 
 export function Sections() {
-  const classes = useStyles();
-
   return (
-    <Box className={classes.sectionsRoot}>
-      <Box className={classes.sectionsWrapper}>
-        <WorkSection />
-        <SkillsSection />
-        <SchoolSection />
-        <LanguagesSection />
-        <HobbySection />
-      </Box>
-    </Box>
+    <>
+      {sectionList.map((Section, i) => <HoverContainer key={`section-${i}`} className='mb-8 p-8 w-full z-0'>
+        <Section />
+      </HoverContainer>)}
+    </>
   );
 }

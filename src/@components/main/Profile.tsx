@@ -67,7 +67,7 @@ export function Profile() {
         leave="duration-75"
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 -translate-y-20"
-        className='fixed top-0 left-0 transform transition'
+        className='fixed top-0 left-0 transform transition z-50'
       >
         <header className='w-screen h-[4.25rem] bg-slate-200/30 z-10 px-16 pt-4 backdrop-blur-sm'>
           <div className='min-w-full flex'>
