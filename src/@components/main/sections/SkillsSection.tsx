@@ -1,24 +1,11 @@
-import Section from './BaseSection';
+import BaseSection from './BaseSection';
 import BarChartIcon from '@material-ui/icons/BarChart';
-import { Box, Chip, createStyles, LinearProgress, makeStyles, Typography } from '@material-ui/core';
 import { FormattedMessage, useIntl } from 'react-intl';
 
 const globalCollator = new Intl.Collator(undefined, {
   numeric: true,
   sensitivity: 'base',
 });
-
-export const useStyles = makeStyles((theme) =>
-  createStyles({
-    chipsWrapper: {
-      padding: '10px 0 20px 20px',
-      maxWidth: '400px',
-      '&  [class^="MuiChip"]': {
-        margin: '5px',
-      },
-    },
-  })
-);
 
 const sumSkillData = [
   {
@@ -127,45 +114,53 @@ const sumSkillData = [
 ];
 
 export function SkillsSection() {
-  const classes = useStyles();
   const intl = useIntl();
 
   return (
-    <Section
-      // @ts-ignore
+    <BaseSection
       icon={BarChartIcon}
       title={intl.formatMessage({ id: 'skills.sectionTitle' })}
-      pageBreak={true}
     >
       {sumSkillData.map((item, i) => (
-        <Box key={`skill-item-${i}`} className="MuiSkillItem-root">
-          <Typography>{item.name}</Typography>
-          <LinearProgress variant="determinate" value={item.percent} />
-          <Typography variant="caption">
+        <div key={`skill-item-${i}`}>
+          <div className='flex'>
+            <h5 className='font-medium'>
+              {item.name}
+            </h5>
+            <div className='flex flex-auto pl-8 ml-0 m-auto'>
+              <div className='w-full h-[5px] bg-slate-300 rounded-md overflow-hidden'>
+                <div className='h-[5px] bg-primary-900' style={{
+                  width: `${item.percent || 0}%`
+                }} />
+              </div>
+            </div>
+          </div>
+          <div
+          />
+          <div className='mb-4'>
             <FormattedMessage id={item.description} />
-          </Typography>
-          <Box className={`${classes.chipsWrapper} cv-chipsWrapper`}>
+          </div>
+          <div className='flex flex-wrap gap-2 mb-8'>
             {item.skillChips.sort(globalCollator.compare).map((chipName, j) => {
-              let chipProps = {
-                label: chipName,
-                variant: 'outlined',
-                size: 'small',
-                key: `skill-item-${j}`,
-              };
-              if (item.urlTemplate)
-                chipProps = {
-                  ...chipProps,
-                  // @ts-ignore
-                  component: 'a',
-                  href: item.urlTemplate(chipName),
-                  clickable: true,
-                };
-              // @ts-ignore
-              return <Chip {...chipProps} />;
+              return <Chip
+                label={chipName}
+                href={item.urlTemplate && item.urlTemplate(chipName)}
+              />
             })}
-          </Box>
-        </Box>
+          </div>
+        </div>
       ))}
-    </Section>
+    </BaseSection>
   );
+}
+
+function Chip({ label, href }) {
+  return <a
+    className='
+      px-[8px] py-[2px] rounded-full after:rounded-full text-primary-900
+      hover:text-slate-100 hover:bg-primary-900 cm-primary-shadow
+    '
+    href={href}>
+    {label}
+  </a>
 }
