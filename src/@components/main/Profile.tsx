@@ -22,31 +22,31 @@ export function Profile() {
                 <FormattedMessage id="profile.name" />
               </p>
               <div className='grid grid-cols-[auto_1fr] grid-rows-5 ml-4 gap-y-2 max-md:grid-cols-1'>
-                <p className='md:justify-self-end font-medium'>
+                <p className='md:justify-self-end pr-1 font-medium'>
                   <FormattedMessage id="profile.dateOfBirth.key" />:
                 </p>
                 <p>
                   <FormattedMessage id="profile.dateOfBirth.value" />
                 </p>
-                <p className='md:justify-self-end font-medium'>
+                <p className='md:justify-self-end pr-1 font-medium'>
                   <FormattedMessage id="profile.nationality.key" />:
                 </p>
                 <p>
                   <FormattedMessage id="profile.nationality.value" />
                 </p>
-                <p className='md:justify-self-end font-medium'>
+                <p className='md:justify-self-end pr-1 font-medium'>
                   <FormattedMessage id="profile.location.key" />:
                 </p>
                 <a href="https://www.google.com/maps/place/Budapest,+XVI.+ker%C3%BClet/@47.5191306,19.1690793,13z/" className='text-primary-900 hover:underline'>
                   <FormattedMessage id="profile.location.value" />
                 </a>
-                <p className='md:justify-self-end font-medium'>
+                <p className='md:justify-self-end pr-1 font-medium'>
                   <FormattedMessage id="profile.mobileNumber.key" />:
                 </p>
                 <a href="tel:+36705108334" className='text-primary-900 hover:underline'>
                   <FormattedMessage id="profile.mobileNumber.value" />
                 </a>
-                <p className='md:justify-self-end font-medium'>
+                <p className='md:justify-self-end pr-1 font-medium'>
                   <FormattedMessage id="profile.emailAddress.key" />:
                 </p>
                 <a href="mailto:kovacs.daniel.9509@gmail.com" className='text-primary-900 hover:underline'>
