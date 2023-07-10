@@ -1,22 +1,7 @@
 import Section from './BaseSection';
 import SchoolIcon from '@material-ui/icons/School';
-
-import { Box, createStyles, makeStyles, Typography } from '@material-ui/core';
 import Timeline, { TimelineItem } from '@components/Timeline';
 import { FormattedMessage, useIntl } from 'react-intl';
-
-export const useStyles = makeStyles((theme) =>
-  createStyles({
-    schoolSectionRoot: {
-      '& .MuiTimelineOppositeContent-root': {
-        maxWidth: '100px',
-        paddingLeft: 0,
-        display: 'flex',
-        justifyContent: 'flex-start',
-      },
-    },
-  })
-);
 
 const sumScoolData = [
   {
@@ -38,30 +23,25 @@ const sumScoolData = [
 ];
 
 export function SchoolSection() {
-  const classes = useStyles();
   const intl = useIntl();
 
   return (
     <Section
-      // @ts-ignore
       icon={SchoolIcon}
       title={intl.formatMessage({ id: 'school.sectionTitle' })}
-      className={classes.schoolSectionRoot}
     >
       <Timeline>
         {sumScoolData.map((item, i) => (
           <TimelineItem
             key={`school-timeline-item-${i}`}
-            oppContent={<Typography color="textSecondary">{item.year}</Typography>}
-            content={
-              <Box>
-                <Typography>
-                  <FormattedMessage id={item.name} />
-                </Typography>
-              </Box>
-            }
+            oppContent={<span className='text-slate-500'>{item.year}</span>}
             last={sumScoolData.length - 1 === i}
-          />
+            className={`${sumScoolData.length - 1 === i ? 'min-h-min' : 'min-h-[60px]'}`}
+          >
+            <div>
+              <FormattedMessage id={item.name} />
+            </div>
+          </TimelineItem>
         ))}
       </Timeline>
     </Section>

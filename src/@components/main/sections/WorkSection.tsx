@@ -74,7 +74,7 @@ function WorkYears({ from, to, present = false }) {
   }), [fromDate, toDate])
 
   return (
-    <div>
+    <div className='text-slate-500'>
       <p>{fromStr}<span className="px-1">-</span>{present ? '' : toStr}</p>
       <p>{durationText}</p>
     </div>

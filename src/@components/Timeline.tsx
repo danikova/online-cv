@@ -4,6 +4,7 @@ type TimelineItemProps = {
   children: ReactElement | ReactElement[]
   oppContent: ReactElement
   last?: boolean
+  className?: string
 }
 
 type TimelineProps = {
@@ -18,10 +19,10 @@ export default function Timeline({ children }: TimelineProps) {
   </div>
 }
 
-export function TimelineItem({ children, oppContent, last = false }: TimelineItemProps) {
+export function TimelineItem({ children, oppContent, last = false, className = '' }: TimelineItemProps) {
   return <>
-    <div className="min-h-[80px]">{oppContent}</div>
-    <div className="min-h-[80px] flex flex-col items-center justify-start">
+    <div className={`min-h-[80px] ${className}`}>{oppContent}</div>
+    <div className={`min-h-[80px] flex flex-col items-center justify-start ${className}`}>
       <div className="w-full flex flex-[0_0_1.5rem] items-center justify-center">
         <div className="rounded-full h-4 w-4 ring-2 ring-slate-400" />
       </div>
@@ -29,7 +30,7 @@ export function TimelineItem({ children, oppContent, last = false }: TimelineIte
         <div className="h-4/5 w-[2px] bg-slate-400" />
       </div>}
     </div>
-    <div className="min-h-[80px]">
+    <div className={`min-h-[80px] ${className}`}>
       <div>{children}</div>
     </div>
   </>

@@ -9,7 +9,7 @@ import HoverContainer from '@components/HoverContainer';
 const sectionList = [
   WorkSection,
   SkillsSection,
-  // SchoolSection,
+  SchoolSection,
   LanguagesSection,
   HobbySection
 ];
