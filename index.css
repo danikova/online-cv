@@ -1169,17 +1169,9 @@ video {
   border-radius: 9999px;
 }
 
-.hover\:cursor-pointer:hover {
-  cursor: pointer;
-}
-
 .hover\:bg-primary-900:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(51 125 166 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-slate-200\/50:hover {
-  background-color: rgb(226 232 240 / 0.5);
 }
 
 .hover\:text-slate-100:hover {
@@ -1284,5 +1276,13 @@ video {
 
   .md\:mix-blend-screen {
     mix-blend-mode: screen;
+  }
+
+  .md\:hover\:cursor-pointer:hover {
+    cursor: pointer;
+  }
+
+  .md\:hover\:bg-slate-200\/50:hover {
+    background-color: rgb(226 232 240 / 0.5);
   }
 }
