@@ -1,6 +1,6 @@
 {
-  "short_name": "KD cv",
-  "name": "Kovács Dániel online cv",
+  "short_name": "KD-CV",
+  "name": "Kovács Dániel online-cv",
   "icons": [
     {
       "src": "icons/favicon.ico",
@@ -8,18 +8,18 @@
       "type": "image/x-icon"
     },
     {
-        "src": "icons/android-chrome-192x192.png",
-        "sizes": "192x192",
-        "type": "image/png"
+      "src": "icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
     },
     {
-        "src": "icons/android-chrome-512x512.png",
-        "sizes": "512x512",
-        "type": "image/png"
+      "src": "icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#f8f3ea",
-  "background_color": "#5584b1"
+  "theme_color": "#4A9AC7",
+  "background_color": "#CBE2EF"
 }
