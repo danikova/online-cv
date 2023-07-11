@@ -10,7 +10,8 @@ function CV() {
   const { locale } = useLocale();
 
   return (
-    <div className='box-border p-24 flex items-center justify-center max-md:p-0 max-md:pb-8'>
+    <div className='
+    box-border p-24 flex items-center justify-center max-lg:p-4 max-md:p-0 max-md:pb-8'>
       <div
         key={locale}
         className='p-12 max-w-[1000px] max-md:p-0 max-md:w-full'
