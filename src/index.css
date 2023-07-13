@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .fade-in {
-opacity: 1;
-animation-name: fadeInOpacity;
-animation-iteration-count: 1;
-animation-timing-function: ease-in;
-animation-duration: 250ms;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 250ms;
 }
 
 @keyframes fadeInOpacity {
@@ -46,4 +45,54 @@ animation-duration: 250ms;
 
 .cm-primary-shadow:hover::after {
   opacity: 1;
+}
+
+.mask {
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+@keyframes strokeOffset {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#mask-k-first {
+  animation: strokeOffset 150ms linear forwards;
+}
+#mask-k-second {
+  animation: strokeOffset 150ms linear forwards;
+}
+#mask-ova {
+  animation: strokeOffset 400ms linear forwards;
+}
+#mask-a-accent {
+  animation: strokeOffset 70ms linear forwards;
+}
+#mask-cs {
+  animation: strokeOffset 200ms linear forwards;
+}
+#mask-d-first {
+  animation: strokeOffset 150ms linear forwards;
+}
+#mask-d-second {
+  animation: strokeOffset 150ms linear forwards;
+}
+#mask-a {
+  animation: strokeOffset 100ms linear forwards;
+}
+#mask-a-accent-2 {
+  animation: strokeOffset 70ms linear forwards;
+}
+#mask-ni  {
+  animation: strokeOffset 200ms linear forwards;
+}
+#mask-i-accent {
+  animation: strokeOffset 70ms linear forwards;
+}
+#mask-el {
+  animation: strokeOffset 400ms linear forwards;
 }

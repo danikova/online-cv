@@ -1,17 +1,16 @@
-import React, { useContext, useState } from 'react';
+import 'dayjs/locale/hu'
+import 'dayjs/locale/en'
+
+import { useContext, useState, createContext } from 'react';
 import Cookies from 'js-cookie';
 
-// import 'moment/locale/hu';
 import { IntlProvider } from 'react-intl';
 
 import Hungarian from './hu.json';
 import English from './en.json';
 
-// const Hungarian = {};
-// const English = {};
-
 const LANG_COOKIE = 'lang.cookie';
-const LangContext = React.createContext<null | any>(null);
+const LangContext = createContext<null | any>(null);
 
 export const supportedLocales = {
   hu: {
