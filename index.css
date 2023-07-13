@@ -709,12 +709,12 @@ video {
   height: 4.25rem;
 }
 
-.h-\[5px\] {
-  height: 5px;
+.h-\[50px\] {
+  height: 50px;
 }
 
-.h-\[auto\] {
-  height: auto;
+.h-\[5px\] {
+  height: 5px;
 }
 
 .h-\[calc\(100\%-1rem\)\] {
@@ -723,10 +723,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.max-h-14 {
-  max-height: 3.5rem;
 }
 
 .min-h-\[60px\] {
@@ -766,8 +762,8 @@ video {
   width: 300px;
 }
 
-.w-\[auto\] {
-  width: auto;
+.w-\[70\%\] {
+  width: 70%;
 }
 
 .w-full {
@@ -784,10 +780,6 @@ video {
 
 .max-w-\[1000px\] {
   max-width: 1000px;
-}
-
-.max-w-\[350px\] {
-  max-width: 350px;
 }
 
 .flex-\[0_0_1\.5rem\] {
@@ -1159,6 +1151,85 @@ video {
   opacity: 1;
 }
 
+.mask {
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+@-webkit-keyframes strokeOffset {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes strokeOffset {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#mask-k-first {
+  -webkit-animation: strokeOffset 150ms linear forwards;
+          animation: strokeOffset 150ms linear forwards;
+}
+
+#mask-k-second {
+  -webkit-animation: strokeOffset 150ms linear forwards;
+          animation: strokeOffset 150ms linear forwards;
+}
+
+#mask-ova {
+  -webkit-animation: strokeOffset 400ms linear forwards;
+          animation: strokeOffset 400ms linear forwards;
+}
+
+#mask-a-accent {
+  -webkit-animation: strokeOffset 70ms linear forwards;
+          animation: strokeOffset 70ms linear forwards;
+}
+
+#mask-cs {
+  -webkit-animation: strokeOffset 200ms linear forwards;
+          animation: strokeOffset 200ms linear forwards;
+}
+
+#mask-d-first {
+  -webkit-animation: strokeOffset 150ms linear forwards;
+          animation: strokeOffset 150ms linear forwards;
+}
+
+#mask-d-second {
+  -webkit-animation: strokeOffset 150ms linear forwards;
+          animation: strokeOffset 150ms linear forwards;
+}
+
+#mask-a {
+  -webkit-animation: strokeOffset 100ms linear forwards;
+          animation: strokeOffset 100ms linear forwards;
+}
+
+#mask-a-accent-2 {
+  -webkit-animation: strokeOffset 70ms linear forwards;
+          animation: strokeOffset 70ms linear forwards;
+}
+
+#mask-ni  {
+  -webkit-animation: strokeOffset 200ms linear forwards;
+          animation: strokeOffset 200ms linear forwards;
+}
+
+#mask-i-accent {
+  -webkit-animation: strokeOffset 70ms linear forwards;
+          animation: strokeOffset 70ms linear forwards;
+}
+
+#mask-el {
+  -webkit-animation: strokeOffset 400ms linear forwards;
+          animation: strokeOffset 400ms linear forwards;
+}
+
 .after\:rounded-2xl::after {
   content: var(--tw-content);
   border-radius: 1rem;
@@ -1215,16 +1286,12 @@ video {
     height: 7rem;
   }
 
-  .max-md\:max-h-10 {
-    max-height: 2.5rem;
-  }
-
   .max-md\:w-full {
     width: 100%;
   }
 
-  .max-md\:max-w-\[calc\(200px\)\] {
-    max-width: calc(200px);
+  .max-md\:max-w-\[200px\] {
+    max-width: 200px;
   }
 
   .max-md\:grid-cols-\[2\.5rem_1fr\] {
