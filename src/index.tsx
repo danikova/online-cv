@@ -3,11 +3,11 @@ import { createRoot } from 'react-dom/client';
 import { createBrowserHistory } from 'history';
 
 import GradientBg from './@components/GradientBg';
+import Signature from '@components/Signature';
 import LocaleWrapper from '@lang';
 import CV from './@components/CV';
 
 import './index.css';
-import Signature from '@components/Signature';
 
 export const history = createBrowserHistory();
 
