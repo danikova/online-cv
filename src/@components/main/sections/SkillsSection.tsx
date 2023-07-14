@@ -160,6 +160,7 @@ function Chip({ label, href }) {
     className='
       px-[8px] py-[2px] rounded-full after:rounded-full text-primary-900
       hover:text-slate-100 hover:bg-primary-900 cm-primary-shadow
+      print:shadow-none print:ring-1 print:ring-slate-400
     '
     href={href}>
     {label}

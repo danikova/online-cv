@@ -10,6 +10,7 @@ function FAB({ children, ...props }) {
     flex flex-wrap content-center justify-center w-12 h-12 bg-white rounded-full text-black
     md:hover:cursor-pointer md:hover:bg-slate-200/50
     md:mix-blend-screen max-md:bg-primary-800 max-md:text-slate-200
+    print:opacity-0
     ${className}
   `}
     {...rest}>

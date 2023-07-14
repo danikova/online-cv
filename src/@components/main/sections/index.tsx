@@ -17,9 +17,13 @@ const sectionList = [
 export function Sections() {
   return (
     <>
-      {sectionList.map((Section, i) => <HoverContainer key={`section-${i}`} className='mb-8 p-8 w-full z-0'>
-        <Section />
-      </HoverContainer>)}
+      {sectionList.map((Section, i) =>
+        <div key={`section-${i}`}>
+          <HoverContainer className='mb-8 p-8 w-full z-0 print:p-0 print:mb-12'>
+            <Section />
+          </HoverContainer>
+        </div>
+      )}
     </>
   );
 }

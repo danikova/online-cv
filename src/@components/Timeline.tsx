@@ -25,7 +25,7 @@ export function TimelineItem({ children, oppContent, last = false, className = '
         <div className="rounded-full h-4 w-4 ring-2 ring-slate-400" />
       </div>
       {!last && <div className="flex flex-auto items-center" >
-        <div className="h-[calc(100%-1rem)] w-[2px] bg-slate-400" />
+        <div className="h-[calc(100%-1rem)] w-0 ring-1 ring-slate-400" />
       </div>}
     </div>
     <div className={`min-h-[80px] ${className}`}>

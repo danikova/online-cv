@@ -107,3 +107,21 @@ html {
 #mask-el {
   animation: strokeOffset 400ms linear forwards;
 }
+
+@media print {
+  @page {
+    size: 330mm 427mm;
+    margin: 15mm;
+  }
+
+  #root,
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .cm-gradient-bg {
+    background-image: none !important;
+  }
+}
