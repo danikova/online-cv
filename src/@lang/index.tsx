@@ -25,8 +25,8 @@ export const supportedLocales = {
   },
 };
 
-const currentLocal = Cookies.get(LANG_COOKIE) || navigator.language.substring(0, 2) || 'hu';
-const currentMsgLocale = supportedLocales[currentLocal] || supportedLocales['hu'];
+const currentLocal = Cookies.get(LANG_COOKIE) || navigator.language.substring(0, 2) || 'en';
+const currentMsgLocale = supportedLocales[currentLocal] || supportedLocales['en'];
 document.title = currentMsgLocale.title;
 
 const LocaleWrapper = (props) => {
@@ -35,7 +35,7 @@ const LocaleWrapper = (props) => {
 
   function selectLanguage(value) {
     const newLocale = value;
-    const newMsgLocale = supportedLocales[newLocale] || supportedLocales['hu'];
+    const newMsgLocale = supportedLocales[newLocale] || supportedLocales['en'];
     Cookies.set(LANG_COOKIE, newLocale);
     setLocale(newLocale);
     setMessages(newMsgLocale.messages);
