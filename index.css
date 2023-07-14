@@ -1015,10 +1015,6 @@ video {
   font-weight: 700;
 }
 
-.font-medium {
-  font-weight: 500;
-}
-
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1088,6 +1084,18 @@ video {
 
 .duration-75 {
   transition-duration: 75ms;
+}
+
+html {
+  font-family: 'Google Sans', serif;
+  letter-spacing: 0.75px;
+  font-size: 12.5pt;
+}
+
+@font-face {
+  font-family: 'Google Sans';
+
+  src: url('./fonts/ProductSans-Regular.woff') format('woff');
 }
 
 .fade-in {
@@ -1215,7 +1223,7 @@ video {
           animation: strokeOffset 70ms linear forwards;
 }
 
-#mask-ni  {
+#mask-ni {
   -webkit-animation: strokeOffset 200ms linear forwards;
           animation: strokeOffset 200ms linear forwards;
 }
