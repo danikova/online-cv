@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import BaseSection from './BaseSection';
 import { MdBarChart } from 'react-icons/md';
 import { FormattedMessage, useIntl } from 'react-intl';
@@ -9,8 +10,73 @@ const globalCollator = new Intl.Collator(undefined, {
 
 const sumSkillData = [
   {
+    name: 'Typescript / JavaScript',
+    percent: 80,
+    percentColor: '#F0DB4F',
+    description: 'skills.js.description',
+    skillChips: [
+      '@ag-grid-community/core',
+      '@material-ui/core',
+      'axios',
+      'formik',
+      'history',
+      'notistack',
+      'react',
+      'react-contextmenu',
+      'react-query',
+      'moment',
+      'redux',
+      'react-router-dom',
+      'draft-js',
+      'react-dropzone',
+      'react-facebook-login',
+      'react-google-login',
+      'react-helmet',
+      'react95',
+      'socket.io-client',
+      '@hapi/joi',
+      'chalk',
+      'google-auth-library',
+      'mongoose',
+      'socket.io',
+      'jest',
+      'supertest',
+      'cypress',
+      'tailwindcss',
+      'next',
+      '@headlessui/react',
+      'eslint',
+      'jotai',
+      'pocketbase',
+      'react-hook-form',
+      'react-icons',
+      'zod',
+      '@faker-js/faker',
+      'deasync',
+      'dotenv',
+      'express',
+      'lodash',
+      'lokijs',
+      'morgan',
+      'openapi-backend',
+      'yaml',
+      'mustache',
+      'nodemon',
+      'cross-env',
+      'vite',
+      'source-map-explorer',
+      'i18next',
+      'js-cookie',
+      'openapi-fetch',
+      'dayjs',
+      'openapi-typescript',
+    ],
+    urlTemplate: (pkgName) => `https://www.npmjs.com/package/${pkgName}`,
+  },
+  {
     name: 'Python',
-    percent: 75,
+    percent: 70,
+    percentColor: '#4B8BBE',
     description: 'skills.python.description',
     skillChips: [
       'Django',
@@ -32,44 +98,9 @@ const sumSkillData = [
     urlTemplate: (pkgName) => `https://pypi.org/project/${pkgName}`,
   },
   {
-    name: 'JavaScript',
-    percent: 62,
-    description: 'skills.js.description',
-    skillChips: [
-      '@ag-grid-community/core',
-      '@material-ui/core',
-      'axios',
-      'formik',
-      'history',
-      'notistack',
-      'react',
-      'react-contextmenu',
-      'react-query',
-      'moment',
-      'redux',
-      'react-router-dom',
-      'draft-js',
-      'react-dropzone',
-      'react-facebook-login',
-      'react-google-login',
-      'react-helmet',
-      'react-hook-form',
-      'react95',
-      'socket.io-client',
-      '@hapi/joi',
-      'chalk',
-      'google-auth-library',
-      'mongoose',
-      'socket.io',
-      'jest',
-      'supertest',
-      'cypress',
-    ],
-    urlTemplate: (pkgName) => `https://www.npmjs.com/package/${pkgName}`,
-  },
-  {
     name: 'Linux',
     percent: 65,
+    percentColor: '#E95420',
     description: 'skills.linux.description',
     skillChips: ['Lubuntu', 'Ubuntu', 'CentOS', 'Rocky_Linux', 'Alpine_Linux'],
     urlTemplate: (distroName) => `https://en.wikipedia.org/wiki/${distroName}`,
@@ -77,6 +108,7 @@ const sumSkillData = [
   {
     name: 'Docker',
     percent: 63,
+    percentColor: '#2496ed',
     description: 'skills.docker.description',
     skillChips: [
       'node',
@@ -105,16 +137,38 @@ const sumSkillData = [
     urlTemplate: (imageName) => `https://hub.docker.com/_/${imageName}`,
   },
   {
-    name: 'Kubernetes',
-    percent: 40,
-    description: 'skills.kubernetes.description',
-    skillChips: [],
-    urlTemplate: (pkgName) => `https://pypi.org/project/${pkgName}/`,
+    name: 'Others',
+    description: 'skills.others.description',
+    skillChips: [
+      'Heroku',
+      'MongoDB',
+      'MongoDB Atlas',
+      'Jenkins',
+      'PocketBase',
+      'Firebase',
+      'SQLite',
+      'Git',
+      'GitHub',
+      'GitLab',
+      'Gerrit',
+      'Go'
+    ],
   },
 ];
 
 export function SkillsSection() {
   const intl = useIntl();
+
+  useEffect(() => {
+    for (const key in sumSkillData) {
+      const usedChips = new Set<string>();
+      for (const chip of sumSkillData[key].skillChips) {
+        if (!chip) continue;
+        if (usedChips.has(chip)) throw Error(`this chip: ${chip} is already used once`);
+        usedChips.add(chip);
+      }
+    }
+  })
 
   return (
     <BaseSection
@@ -122,25 +176,26 @@ export function SkillsSection() {
       title={intl.formatMessage({ id: 'skills.sectionTitle' })}
     >
       {sumSkillData.map((item, i) => (
-        <div key={`skill-item-${i}`}>
+        <div key={`skill-item-${i}`} className='mb-8 last-of-type:mb-0'>
           <div className='flex'>
             <h5 className='font-bold'>
               {item.name}
             </h5>
-            <div className='flex flex-auto pl-8 ml-0 m-auto'>
+            {item.percent && <div className='flex flex-auto pl-8 ml-0 m-auto'>
               <div className='w-full h-[5px] bg-slate-300 rounded-md overflow-hidden'>
                 <div className='h-[5px] bg-primary-900' style={{
-                  width: `${item.percent || 0}%`
+                  width: `${item.percent || 0}%`,
+                  backgroundColor: item.percentColor
                 }} />
               </div>
-            </div>
+            </div>}
           </div>
           <div
           />
           <div className='mb-4'>
             <FormattedMessage id={item.description} />
           </div>
-          <div className='flex flex-wrap gap-2 mb-8'>
+          <div className='flex flex-wrap gap-2'>
             {item.skillChips.sort(globalCollator.compare).map((chipName) => {
               return <Chip
                 key={chipName}
@@ -155,14 +210,23 @@ export function SkillsSection() {
   );
 }
 
-function Chip({ label, href }) {
-  return <a
+function Chip({ label, href }: { label: string, href?: string }) {
+  if (href)
+    return <a
+      className='
+      px-[8px] py-[2px] rounded-full after:rounded-full text-primary-900
+      hover:text-slate-100 hover:bg-primary-900 cm-primary-shadow
+      print:shadow-none print:ring-1 print:ring-slate-400 print:text-slate-500
+    '
+      href={href}>
+      {label}
+    </a>
+  return <div
     className='
       px-[8px] py-[2px] rounded-full after:rounded-full text-primary-900
       hover:text-slate-100 hover:bg-primary-900 cm-primary-shadow
-      print:shadow-none print:ring-1 print:ring-slate-400
-    '
-    href={href}>
+      print:shadow-none print:ring-1 print:ring-slate-400 print:text-slate-500
+    '>
     {label}
-  </a>
+  </div>
 }

@@ -19,8 +19,8 @@ export default function Timeline({ children }: TimelineProps) {
 
 export function TimelineItem({ children, oppContent, last = false, className = '' }: TimelineItemProps) {
   return <>
-    <div className={`min-h-[80px] max-md:hidden ${className}`}>{oppContent}</div>
-    <div className={`min-h-[80px] flex flex-col items-center justify-start ${className}`}>
+    <div className={`max-md:hidden ${className}`}>{oppContent}</div>
+    <div className={`flex flex-col items-center justify-start ${className}`}>
       <div className="w-full flex flex-[0_0_1.5rem] items-center justify-center">
         <div className="rounded-full h-4 w-4 ring-2 ring-slate-400" />
       </div>
@@ -28,7 +28,7 @@ export function TimelineItem({ children, oppContent, last = false, className = '
         <div className="h-[calc(100%-1rem)] w-0 ring-1 ring-slate-400" />
       </div>}
     </div>
-    <div className={`min-h-[80px] ${className}`}>
+    <div className={`${className}`}>
       <div className="md:hidden">{oppContent}</div>
       <div>{children}</div>
     </div>

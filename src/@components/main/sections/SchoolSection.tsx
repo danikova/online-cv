@@ -36,7 +36,7 @@ export function SchoolSection() {
             key={`school-timeline-item-${i}`}
             oppContent={<span className='text-slate-500'>{item.year}</span>}
             last={sumScoolData.length - 1 === i}
-            className={`${sumScoolData.length - 1 === i ? 'min-h-min' : 'min-h-[60px]'}`}
+            className='min-h-[60px]'
           >
             <div>
               <FormattedMessage id={item.name} />

@@ -104,7 +104,7 @@ export function WorkSection() {
                 <h5 className='font-bold'>
                   <FormattedMessage id={timelineData.title} />
                 </h5>
-                <div className='mb-4'>
+                <div className={`${item.timeline.length - 1 === j ? '' : 'mb-4'}`}>
                   <FormattedMessage id={timelineData.caption} />
                 </div>
               </TimelineItem>
