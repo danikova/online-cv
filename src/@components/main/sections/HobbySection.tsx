@@ -12,11 +12,11 @@ export function HobbySection() {
     >
       <div className='flex flex-col gap-4'>
         <div>
-          <h5 className='font-medium'><FormattedMessage id="hobby.programing.title" /></h5>
+          <h5 className='font-bold'><FormattedMessage id="hobby.programing.title" /></h5>
           <div><FormattedMessage id="hobby.programing.description" /></div>
         </div>
         <div>
-          <h5 className='font-medium'><FormattedMessage id="hobby.cycling.title" /></h5>
+          <h5 className='font-bold'><FormattedMessage id="hobby.cycling.title" /></h5>
           <div><FormattedMessage id="hobby.cycling.description" /></div>
         </div>
       </div>

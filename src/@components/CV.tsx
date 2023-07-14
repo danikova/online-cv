@@ -1,5 +1,3 @@
-import '@fontsource/roboto';
-
 import { Profile } from './main/Profile';
 import { Footer } from './main/Footer';
 import { Sections } from './main/sections';

@@ -12,11 +12,11 @@ export function LanguageSection() {
     >
       <div className='flex flex-col gap-4'>
         <div>
-          <h5 className='font-medium'><FormattedMessage id="lang.hungarian" /></h5>
+          <h5 className='font-bold'><FormattedMessage id="lang.hungarian" /></h5>
           <div><FormattedMessage id="lang.hungarian.levelDescription" /></div>
         </div>
         <div>
-          <h5 className='font-medium'><FormattedMessage id="lang.english" /></h5>
+          <h5 className='font-bold'><FormattedMessage id="lang.english" /></h5>
           <div><FormattedMessage id="lang.english.levelDescription" /></div>
         </div>
       </div>

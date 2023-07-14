@@ -124,7 +124,7 @@ export function SkillsSection() {
       {sumSkillData.map((item, i) => (
         <div key={`skill-item-${i}`}>
           <div className='flex'>
-            <h5 className='font-medium'>
+            <h5 className='font-bold'>
               {item.name}
             </h5>
             <div className='flex flex-auto pl-8 ml-0 m-auto'>

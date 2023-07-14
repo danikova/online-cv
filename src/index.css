@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-family: 'Google Sans', serif;
+  letter-spacing: 0.75px;
+  font-size: 12.5pt;
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  src: url('./fonts/ProductSans-Regular.woff') format('woff');
+}
+
 .fade-in {
   opacity: 1;
   animation-name: fadeInOpacity;
@@ -11,12 +22,12 @@
 }
 
 @keyframes fadeInOpacity {
-0% {
-  opacity: 0;
-}
-100% {
-  opacity: 1;
-}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .cm-primary-shadow {
@@ -87,7 +98,7 @@
 #mask-a-accent-2 {
   animation: strokeOffset 70ms linear forwards;
 }
-#mask-ni  {
+#mask-ni {
   animation: strokeOffset 200ms linear forwards;
 }
 #mask-i-accent {

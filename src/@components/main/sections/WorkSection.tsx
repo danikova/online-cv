@@ -91,7 +91,7 @@ export function WorkSection() {
     >
       {sumWorkData.map((item, i) => (
         <div key={`company-list-${i}`}>
-          <h4 className='text-lg mb-4 font-medium'>
+          <h4 className='text-lg mb-4 font-bold'>
             <FormattedMessage id={item.company} />
           </h4>
           <Timeline>
@@ -101,7 +101,7 @@ export function WorkSection() {
                 oppContent={<WorkYears from={timelineData.from} to={timelineData.to} present={timelineData.present} />}
                 last={item.timeline.length - 1 === j}
               >
-                <h5 className='font-medium'>
+                <h5 className='font-bold'>
                   <FormattedMessage id={timelineData.title} />
                 </h5>
                 <div className='mb-4'>
