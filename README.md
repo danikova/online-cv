@@ -1,6 +1,9 @@
 # Online CV
 
-**Online CV** is a web-based platform that allows users to create and manage their professional resumes online. This project was developed as a modern solution to showcase an individual's skills, experience, and achievements in a visually appealing and easily accessible format. The application supports dynamic content, is responsive, and can be easily customized to fit various professional profiles.
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/danikova/online-cv)](https://github.com/danikova/online-cv/stargazers)
+
+**Online CV** is a personal web-based resume designed specifically to showcase my professional background, skills, and achievements. This project serves as a modern, interactive, and easily accessible version of my curriculum vitae, providing a detailed overview of my career in a visually appealing format.
 
 ## Table of Contents
 
@@ -9,22 +12,18 @@
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
-- [Acknowledgements](#acknowledgements)
 
 ## Project Overview
 
-The **Online CV** project is designed to help users build an attractive online resume that can be shared with potential employers, colleagues, or clients. It simplifies the process of resume creation by offering an easy-to-use interface with various customization options. This project focuses on delivering a seamless user experience while ensuring the resume remains professional and comprehensive.
+This **Online CV** project is a custom-built digital resume created to present my professional journey, skills, and qualifications in a dynamic and engaging way. Unlike traditional CVs, this online version offers interactivity and is accessible across various devices, making it convenient for sharing and viewing by potential employers, colleagues, and professional networks.
 
 ## Features
 
-- **Responsive Design**: The CV is accessible on various devices, including desktops, tablets, and smartphones.
-- **Dynamic Content**: Easily update your CV content through a user-friendly interface.
-- **Customizable Sections**: Add, remove, or rearrange sections such as Education, Experience, Skills, and more.
-- **Printable Version**: Download or print a neatly formatted version of the CV.
-- **Shareable Link**: Generate a unique URL to share your CV online.
-- **Dark Mode Support**: Toggle between light and dark themes for a more personalized experience.
+- **Personalized Layout**: A tailored design that reflects my personal brand and professional identity.
+- **Responsive Design**: The CV is fully responsive, ensuring it looks great on desktops, tablets, and smartphones.
+- **Dynamic Content**: The content is structured to highlight my most relevant skills, experiences, and achievements.
+- **Shareable Link**: Easily share the CV via a unique URL.
 
 ## Technologies Used
 
@@ -32,11 +31,11 @@ The **Online CV** project is designed to help users build an attractive online r
 - **Framework**: React.js
 - **Styling**: Tailwind CSS
 - **Build Tool**: Vite
-- **Deployment**: Netlify/GitHub Pages (or any static site hosting service)
+- **Deployment**: Netlify/GitHub Pages
 
 ## Installation
 
-To set up the project locally, follow these steps:
+To view or modify the project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
@@ -59,29 +58,11 @@ To set up the project locally, follow these steps:
 
 ## Usage
 
-- **Create Sections**: Use the interface to add different sections like Education, Work Experience, and Skills.
-- **Edit Content**: Update each section with your relevant details.
-- **Customize Layout**: Drag and drop sections to reorder them according to your preference.
-- **Preview CV**: View how your CV will look with the live preview feature.
-- **Download/Share**: Once satisfied, you can download your CV as a PDF or share it using a unique link.
-
-## Contributing
-
-Contributions are welcome! If you'd like to contribute to the project, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch with a descriptive name (`git checkout -b feature-branch-name`).
-3. Make your changes.
-4. Commit your changes (`git commit -m 'Add some feature'`).
-5. Push to the branch (`git push origin feature-branch-name`).
-6. Create a pull request.
+- **Personal Viewing**: The online CV is tailored for my use, allowing me to present my professional background effectively.
+- **Update Content**: To update or revise the CV content, modify the React components accordingly.
+- **Preview CV**: Use the live preview to see changes in real-time as the content is updated.
+- **Shareable**: A public link can be shared with others to provide easy access to my CV.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Vite](https://vitejs.dev/)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
