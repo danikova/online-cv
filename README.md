@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Online CV
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/danikova/online-cv)](https://github.com/danikova/online-cv/stargazers)
 
-## Available Scripts
+**Online CV** is a personal web-based resume designed specifically to showcase my professional background, skills, and achievements. This project serves as a modern, interactive, and easily accessible version of my curriculum vitae, providing a detailed overview of my career in a visually appealing format.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Overview
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This **Online CV** project is a custom-built digital resume created to present my professional journey, skills, and qualifications in a dynamic and engaging way. Unlike traditional CVs, this online version offers interactivity and is accessible across various devices, making it convenient for sharing and viewing by potential employers, colleagues, and professional networks.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Personalized Layout**: A tailored design that reflects my personal brand and professional identity.
+- **Responsive Design**: The CV is fully responsive, ensuring it looks great on desktops, tablets, and smartphones.
+- **Dynamic Content**: The content is structured to highlight my most relevant skills, experiences, and achievements.
+- **Shareable Link**: Easily share the CV via a unique URL.
 
-### `npm run build`
+## Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend**: HTML, CSS, JavaScript
+- **Framework**: React.js
+- **Styling**: Tailwind CSS
+- **Build Tool**: Vite
+- **Deployment**: Netlify/GitHub Pages
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To view or modify the project locally, follow these steps:
 
-### `npm run eject`
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/danikova/online-cv.git
+   ```
+2. **Navigate to the project directory**:
+   ```bash
+   cd online-cv
+   ```
+3. **Install the required dependencies**:
+   ```bash
+   npm install
+   ```
+4. **Run the application**:
+   ```bash
+   npm run dev
+   ```
+5. **Access the application**:
+   - The app should be running at `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Usage
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Personal Viewing**: The online CV is tailored for my use, allowing me to present my professional background effectively.
+- **Update Content**: To update or revise the CV content, modify the React components accordingly.
+- **Preview CV**: Use the live preview to see changes in real-time as the content is updated.
+- **Shareable**: A public link can be shared with others to provide easy access to my CV.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## License
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
