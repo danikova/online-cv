@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# Online CV
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Online CV** is a web-based platform that allows users to create and manage their professional resumes online. This project was developed as a modern solution to showcase an individual's skills, experience, and achievements in a visually appealing and easily accessible format. The application supports dynamic content, is responsive, and can be easily customized to fit various professional profiles.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
-### `npm start`
+## Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The **Online CV** project is designed to help users build an attractive online resume that can be shared with potential employers, colleagues, or clients. It simplifies the process of resume creation by offering an easy-to-use interface with various customization options. This project focuses on delivering a seamless user experience while ensuring the resume remains professional and comprehensive.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Features
 
-### `npm test`
+- **Responsive Design**: The CV is accessible on various devices, including desktops, tablets, and smartphones.
+- **Dynamic Content**: Easily update your CV content through a user-friendly interface.
+- **Customizable Sections**: Add, remove, or rearrange sections such as Education, Experience, Skills, and more.
+- **Printable Version**: Download or print a neatly formatted version of the CV.
+- **Shareable Link**: Generate a unique URL to share your CV online.
+- **Dark Mode Support**: Toggle between light and dark themes for a more personalized experience.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- **Frontend**: HTML, CSS, JavaScript
+- **Framework**: React.js
+- **Styling**: Tailwind CSS
+- **Build Tool**: Vite
+- **Deployment**: Netlify/GitHub Pages (or any static site hosting service)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To set up the project locally, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/danikova/online-cv.git
+   ```
+2. **Navigate to the project directory**:
+   ```bash
+   cd online-cv
+   ```
+3. **Install the required dependencies**:
+   ```bash
+   npm install
+   ```
+4. **Run the application**:
+   ```bash
+   npm run dev
+   ```
+5. **Access the application**:
+   - The app should be running at `http://localhost:3000`.
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- **Create Sections**: Use the interface to add different sections like Education, Work Experience, and Skills.
+- **Edit Content**: Update each section with your relevant details.
+- **Customize Layout**: Drag and drop sections to reorder them according to your preference.
+- **Preview CV**: View how your CV will look with the live preview feature.
+- **Download/Share**: Once satisfied, you can download your CV as a PDF or share it using a unique link.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Contributions are welcome! If you'd like to contribute to the project, please follow these steps:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Fork the repository.
+2. Create a new branch with a descriptive name (`git checkout -b feature-branch-name`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature-branch-name`).
+6. Create a pull request.
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Acknowledgements
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
