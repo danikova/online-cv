@@ -1,3 +1,4 @@
+import { cn } from "@utils";
 import { ReactElement } from "react";
 
 type TimelineItemProps = {
@@ -27,8 +28,10 @@ export function TimelineItem({
 }: TimelineItemProps) {
   return (
     <>
-      <div className={`max-md:hidden ${className}`}>{oppContent}</div>
-      <div className={`flex flex-col items-center justify-start ${className}`}>
+      <div className={cn("max-md:hidden", className)}>{oppContent}</div>
+      <div
+        className={cn("flex flex-col items-center justify-start", className)}
+      >
         <div className="w-full flex flex-[0_0_1.5rem] items-center justify-center">
           <div className="rounded-full h-4 w-4 ring-2 ring-slate-400" />
         </div>
@@ -38,7 +41,7 @@ export function TimelineItem({
           </div>
         )}
       </div>
-      <div className={`${className}`}>
+      <div className={className}>
         <div className="md:hidden">{oppContent}</div>
         <div>{children}</div>
       </div>

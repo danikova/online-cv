@@ -1,6 +1,7 @@
 import { createPortal } from "react-dom";
 import { MdTranslate, MdPrint } from "react-icons/md";
 import { supportedLocales, useLocale } from "@lang";
+import { cn } from "@utils";
 
 const supportedLocaleKeys = Object.keys(supportedLocales);
 
@@ -8,13 +9,10 @@ function FAB({ children, ...props }) {
   const { className, ...rest } = props;
   return (
     <div
-      className={`
-    flex flex-wrap content-center justify-center w-12 h-12 bg-white rounded-full text-black
-    md:hover:cursor-pointer md:hover:bg-slate-200/50
-    md:mix-blend-screen max-md:bg-primary-800 max-md:text-slate-200
-    print:opacity-0
-    ${className}
-  `}
+      className={cn(
+        "flex flex-wrap content-center justify-center w-12 h-12 bg-white rounded-full text-black md:hover:cursor-pointer md:hover:bg-slate-200/50 md:mix-blend-screen max-md:bg-primary-800 max-md:text-slate-200 print:opacity-0",
+        className
+      )}
       {...rest}
     >
       {children}
@@ -47,6 +45,6 @@ export function Actions() {
         <MdPrint className="text-[25px]" />
       </FAB>
     </>,
-    document.body,
+    document.body
   );
 }
