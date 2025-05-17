@@ -114,7 +114,7 @@ export function WorkSection() {
         const inYears = Math.round(sumWorkTimeInMonths / 12);
 
         return (
-          <div key={`company-list-${i}`}>
+          <div key={`company-list-${i}`} className="mb-8 last-of-type:mb-0">
             <h4 className="text-lg mb-4 font-bold">
               <FormattedMessage id={item.company} />{" "}
               {inYears >= 1 && (
