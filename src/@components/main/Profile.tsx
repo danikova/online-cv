@@ -35,34 +35,33 @@ export function Profile() {
           </div>
         </HoverContainer>
       </header>
-      {!isImgVisible &&
-        createPortal(
-          <Transition
-            show={!isImgVisible}
-            enter="duration-75"
-            enterFrom="opacity-0 -translate-y-20"
-            enterTo="opacity-100 translate-y-0"
-            leave="duration-75"
-            leaveFrom="opacity-100 translate-y-0"
-            leaveTo="opacity-0 -translate-y-20"
-            className="fixed top-0 left-0 transform transition z-50 print:hidden"
-          >
-            <header className="w-screen h-[4.25rem] bg-slate-200/30 z-10 px-16 pt-4 backdrop-blur-sm max-md:px-4">
-              <div className="min-w-full flex">
-                <HoverContainer className="h-24 w-24">
-                  <img
-                    className="h-24 w-24 rounded-2xl max-md:rounded-md"
-                    src="./profile.picture.jpg"
-                  />
-                </HoverContainer>
-                <span className="text-3xl font-bold pl-[1.5rem]">
-                  <FormattedMessage id="profile.name" />
-                </span>
-              </div>
-            </header>
-          </Transition>,
-          document.body,
-        )}
+      {createPortal(
+        <Transition
+          show={!isImgVisible}
+          enter="duration-75"
+          enterFrom="opacity-0 -translate-y-20"
+          enterTo="opacity-100 translate-y-0"
+          leave="duration-75"
+          leaveFrom="opacity-100 translate-y-0"
+          leaveTo="opacity-0 -translate-y-20"
+          className="fixed top-0 left-0 transform transition z-50 print:hidden"
+        >
+          <header className="w-screen h-[4.25rem] bg-slate-200/30 z-10 px-16 pt-4 backdrop-blur-sm max-md:px-4">
+            <div className="min-w-full flex">
+              <HoverContainer className="h-24 w-24">
+                <img
+                  className="h-24 w-24 rounded-2xl max-md:rounded-md"
+                  src="./profile.picture.jpg"
+                />
+              </HoverContainer>
+              <span className="text-3xl font-bold pl-[1.5rem]">
+                <FormattedMessage id="profile.name" />
+              </span>
+            </div>
+          </header>
+        </Transition>,
+        document.body
+      )}
       <Transition
         show={!isImgVisible}
         enter="duration-75"
@@ -72,7 +71,9 @@ export function Profile() {
         leaveFrom="h-[4.25rem]"
         leaveTo="h-0"
         className="transition-all max-md:hidden print:hidden"
-      ></Transition>
+      >
+        <div className="h-[4.25rem]"></div>
+      </Transition>
     </>
   );
 }
