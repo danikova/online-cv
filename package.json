@@ -4,15 +4,15 @@
   "private": true,
   "homepage": "https://danikova.github.io/online-cv/",
   "dependencies": {
-    "@headlessui/react": "^1.7.15",
-    "dayjs": "^1.11.9",
+    "@headlessui/react": "^1.7.19",
+    "dayjs": "^1.11.13",
     "history": "^5.3.0",
-    "humanize-duration": "^3.28.0",
+    "humanize-duration": "^3.32.2",
     "js-cookie": "^3.0.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.10.1",
-    "react-intl": "^6.4.4"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^4.12.0",
+    "react-intl": "^6.8.9"
   },
   "scripts": {
     "start": "vite",
@@ -40,19 +40,19 @@
     ]
   },
   "devDependencies": {
-    "@types/humanize-duration": "^3.27.1",
-    "@types/js-cookie": "^3.0.3",
-    "@vitejs/plugin-react": "^4.0.2",
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.44.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-prettier": "^5.0.0-alpha.1",
-    "postcss": "^8.4.25",
-    "prettier": "^3.0.0",
-    "tailwindcss": "^3.3.2",
-    "typescript": "^5.1.6",
-    "vite": "^4.4.2",
-    "vite-plugin-svgr": "^3.2.0",
-    "vite-tsconfig-paths": "^4.2.0"
+    "@types/humanize-duration": "^3.27.4",
+    "@types/js-cookie": "^3.0.6",
+    "@vitejs/plugin-react": "^4.4.1",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-plugin-prettier": "^5.4.0",
+    "postcss": "^8.5.3",
+    "prettier": "^3.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-svgr": "^4.3.0",
+    "vite-tsconfig-paths": "^4.3.2"
   }
 }
