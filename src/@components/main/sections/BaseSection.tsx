@@ -2,7 +2,7 @@ export default function BaseSection({ icon: Icon, title, children, ...props }) {
   return (
     <div
       {...props}
-      className={`pagebrake ${props.className ? props.className : ""}`}
+      className={`break-inside-avoid ${props.className ? props.className : ""}`}
     >
       <div className="flex items-center mb-8">
         <Icon className="mr-8 text-[25px]" />

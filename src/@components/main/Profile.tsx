@@ -6,19 +6,12 @@ import { createPortal } from "react-dom";
 import { FormattedMessage } from "react-intl";
 
 export function Profile() {
-  const imgRef = useRef<HTMLImageElement | null>(null);
-  const isImgVisible = useIsInViewport(imgRef, true);
+  const [ProfilePicture, isImgVisible] = useProfilePicture();
 
   return (
     <>
       <header className="flex gap-8 pb-8">
-        <HoverContainer className="h-[300px] w-[300px] basis-[300px] screen:max-md:hidden">
-          <img
-            ref={imgRef}
-            className="h-[300px] w-[300px] rounded-2xl"
-            src="./profile.picture.jpg"
-          />
-        </HoverContainer>
+        <ProfilePicture />
         <HoverContainer className="flex-auto p-8">
           <div className="flex-auto">
             <div className="min-h-full flex flex-col">
@@ -76,6 +69,32 @@ export function Profile() {
       </Transition>
     </>
   );
+}
+
+function useProfilePicture() {
+  const imgRef = useRef<HTMLImageElement | null>(null);
+  const isImgVisible = useIsInViewport(imgRef, true);
+
+  return [
+    () => (
+      <>
+        <HoverContainer className="h-[300px] w-[300px] basis-[300px] max-md:hidden print:hidden">
+          <img
+            ref={imgRef}
+            className="h-[300px] w-[300px] rounded-2xl"
+            src="./profile.picture.jpg"
+          />
+        </HoverContainer>
+        <HoverContainer className="h-[300px] w-[300px] basis-[300px] hidden shadow-none print:block">
+          <img
+            className="h-[300px] w-[300px] rounded-2xl"
+            src="./profile.picture.jpg"
+          />
+        </HoverContainer>
+      </>
+    ),
+    isImgVisible,
+  ] as const;
 }
 
 function ProfileGridContent() {

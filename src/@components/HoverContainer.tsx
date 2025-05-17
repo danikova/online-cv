@@ -1,3 +1,5 @@
+import { cn } from "@utils";
+
 export default function HoverContainer({
   children,
   className,
@@ -7,12 +9,10 @@ export default function HoverContainer({
 }) {
   return (
     <div
-      className={`
-    cm-primary-shadow rounded-2xl after:rounded-2xl bg-slate-100 
-    max-md:rounded-md max-md:hover:rounded-md
-    print:bg-inherit  print:shadow-none
-  ${className}
-  `}
+      className={cn(
+        "cm-primary-shadow rounded-2xl after:rounded-2xl bg-slate-100 max-md:rounded-md max-md:hover:rounded-md print:bg-inherit  print:shadow-none",
+        className
+      )}
     >
       {children}
     </div>
