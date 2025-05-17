@@ -29,6 +29,14 @@ export function HobbySection() {
         </div>
         <div>
           <h5 className="font-bold">
+            <FormattedMessage id="hobby.building.title" />
+          </h5>
+          <div>
+            <FormattedMessage id="hobby.building.description" />
+          </div>
+        </div>
+        <div>
+          <h5 className="font-bold">
             <FormattedMessage id="hobby.gaming.title" />
           </h5>
           <div>

@@ -46,9 +46,11 @@
   "lang.english.levelDescription": "conversational level, jargon",
   "hobby.sectionTitle": "Hobby, free time",
   "hobby.programing.title": "programing",
-  "hobby.programing.description": "I like to work on smaller projects in my free time, for example smaller 3d games or custom, interesting webpages",
+  "hobby.programing.description": "I like to work on smaller projects in my free time, for example smaller 3d applications or custom, interesting webpages",
   "hobby.cycling.title": "riding, building and repairing bicycles",
   "hobby.cycling.description": "I'm commuting with bike in the city, but I like riding longer distances too, I also repaired and maintained several bikes",
+  "hobby.building.title": "DIY, building",
+  "hobby.building.description": "I like to build and repair things, whether it's furniture or various gadgets, e.g.: FPV drones, simple cabinets, PCs, NASs",
   "hobby.gaming.title": "gaming",
   "hobby.gaming.description": "I'm interested in all kind of games, board games or video games, currently I'm playing smaller indie games, especially the 'factory manager' genre like Factorio, Shapez 1/2, but I'm also interested in different RPGs and strategy games",
   "references.sectionTitle": "References"
