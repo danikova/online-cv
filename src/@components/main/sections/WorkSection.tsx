@@ -16,15 +16,15 @@ const sumWorkData = [
         from: "2024.01.01",
         to: new Date(),
         present: true,
-        title: "work.nokiaWebGUILeadDev.title",
-        caption: "work.nokiaWebGUILeadDev.caption",
+        title: "work.nokiaWebUILeadDev.title",
+        caption: "work.nokiaWebUILeadDev.caption",
       },
       {
         from: "2022.06.01",
         to: "2024.01.01",
         present: true,
-        title: "work.nokiaWebGUIDev.title",
-        caption: "work.nokiaWebGUIDev.caption",
+        title: "work.nokiaWebUIDev.title",
+        caption: "work.nokiaWebUIDev.caption",
       },
       {
         from: "2020.01.01",
@@ -82,7 +82,7 @@ function WorkYears({ from, to, present = false }) {
         units: ["y", "mo"],
         round: true,
       }),
-    [fromDate, toDate],
+    [fromDate, toDate]
   );
 
   return (
