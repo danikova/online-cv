@@ -12,7 +12,7 @@ export function Profile() {
   return (
     <>
       <header className="flex gap-8 pb-8">
-        <HoverContainer className="h-[300px] w-[300px] basis-[300px] max-md:hidden">
+        <HoverContainer className="h-[300px] w-[300px] basis-[300px] screen:max-md:hidden">
           <img
             ref={imgRef}
             className="h-[300px] w-[300px] rounded-2xl"
