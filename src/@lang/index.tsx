@@ -1,32 +1,34 @@
-import 'dayjs/locale/hu'
-import 'dayjs/locale/en'
+import "dayjs/locale/hu";
+import "dayjs/locale/en";
 
-import { useContext, useState, createContext } from 'react';
-import Cookies from 'js-cookie';
+import { useContext, useState, createContext } from "react";
+import Cookies from "js-cookie";
 
-import { IntlProvider } from 'react-intl';
+import { IntlProvider } from "react-intl";
 
-import Hungarian from './hu.json';
-import English from './en.json';
+import Hungarian from "./hu.json";
+import English from "./en.json";
 
-const LANG_COOKIE = 'lang.cookie';
+const LANG_COOKIE = "lang.cookie";
 const LangContext = createContext<null | any>(null);
 
 export const supportedLocales = {
   hu: {
     messages: Object.assign({}, English, Hungarian),
-    visibleName: 'Hu',
-    title: 'Önéletrajz - Kovács Daniel - Hu',
+    visibleName: "Hu",
+    title: "Önéletrajz - Kovács Daniel - Hu",
   },
   en: {
     messages: English,
-    visibleName: 'En',
-    title: 'CV - Daniel Kovács - En',
+    visibleName: "En",
+    title: "CV - Daniel Kovács - En",
   },
 };
 
-const currentLocal = Cookies.get(LANG_COOKIE) || navigator.language.substring(0, 2) || 'en';
-const currentMsgLocale = supportedLocales[currentLocal] || supportedLocales['en'];
+const currentLocal =
+  Cookies.get(LANG_COOKIE) || navigator.language.substring(0, 2) || "en";
+const currentMsgLocale =
+  supportedLocales[currentLocal] || supportedLocales["en"];
 document.title = currentMsgLocale.title;
 
 const LocaleWrapper = (props) => {
@@ -35,7 +37,7 @@ const LocaleWrapper = (props) => {
 
   function selectLanguage(value) {
     const newLocale = value;
-    const newMsgLocale = supportedLocales[newLocale] || supportedLocales['en'];
+    const newMsgLocale = supportedLocales[newLocale] || supportedLocales["en"];
     Cookies.set(LANG_COOKIE, newLocale);
     setLocale(newLocale);
     setMessages(newMsgLocale.messages);

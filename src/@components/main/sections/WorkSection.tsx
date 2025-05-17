@@ -82,7 +82,7 @@ function WorkYears({ from, to, present = false }) {
         units: ["y", "mo"],
         round: true,
       }),
-    [fromDate, toDate]
+    [fromDate, toDate],
   );
 
   return (
